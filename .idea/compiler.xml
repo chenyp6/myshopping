@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="myshopping" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ecp-aip-web" target="1.7" />
+      <module name="ecp-busi" target="1.5" />
+      <module name="ecp-common-intefaces" target="1.7" />
+      <module name="ecp-mobile-jar" target="1.7" />
+      <module name="ecp-monitor" target="1.7" />
+      <module name="ecp-server-publish" target="1.7" />
+      <module name="ecp-services" target="1.5" />
+      <module name="ecp-services-aip-client" target="1.6" />
+      <module name="ecp-services-aip-server" target="1.7" />
+      <module name="ecp-services-client" target="1.5" />
+      <module name="ecp-services-cms-client" target="1.7" />
+      <module name="ecp-services-cms-server" target="1.7" />
+      <module name="ecp-services-coupon-client" target="1.6" />
+      <module name="ecp-services-coupon-server" target="1.7" />
+      <module name="ecp-services-demo-client" target="1.7" />
+      <module name="ecp-services-demo-server" target="1.7" />
+      <module name="ecp-services-goods-client" target="1.7" />
+      <module name="ecp-services-goods-server" target="1.7" />
+      <module name="ecp-services-im-server" target="1.7" />
+      <module name="ecp-services-order-client" target="1.6" />
+      <module name="ecp-services-order-server" target="1.7" />
+      <module name="ecp-services-prom-client" target="1.6" />
+      <module name="ecp-services-prom-server" target="1.7" />
+      <module name="ecp-services-quartz" target="1.7" />
+      <module name="ecp-services-search-client" target="1.7" />
+      <module name="ecp-services-search-server" target="1.7" />
+      <module name="ecp-services-staff-client" target="1.6" />
+      <module name="ecp-services-staff-server" target="1.7" />
+      <module name="ecp-services-sys-client" target="1.7" />
+      <module name="ecp-services-sys-server" target="1.7" />
+      <module name="ecp-web" target="1.5" />
+      <module name="ecp-web-im" target="1.7" />
+      <module name="ecp-web-mall" target="1.7" />
+      <module name="ecp-web-mall-jar" target="1.7" />
+      <module name="ecp-web-mall-point" target="1.7" />
+      <module name="ecp-web-mall-point-jar" target="1.7" />
+      <module name="ecp-web-manage" target="1.7" />
+      <module name="ecp-web-manage-jar" target="1.7" />
+      <module name="ecp-web-mobile" target="1.7" />
+      <module name="ecp-web-mobile-jar" target="1.7" />
+      <module name="ecp-web-mobile-point" target="1.7" />
+      <module name="ecp-web-template-jar" target="1.7" />
+      <module name="monitor-web" target="1.7" />
+      <module name="myshopping" target="1.5" />
+      <module name="skywalking" target="1.7" />
+      <module name="skywalking-api" target="1.7" />
+      <module name="skywalking-dubbo-plugin" target="1.7" />
+      <module name="skywalking-jdbc-plugin" target="1.7" />
+      <module name="skywalking-log4j-1.x-plugin" target="1.7" />
+      <module name="skywalking-log4j-2.x-plugin" target="1.7" />
+      <module name="skywalking-protocol" target="1.7" />
+      <module name="skywalking-server" target="1.7" />
+      <module name="skywalking-spring-plugin" target="1.7" />
+      <module name="skywalking-web-plugin" target="1.7" />
+      <module name="web-build-jar" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

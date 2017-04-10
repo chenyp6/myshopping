@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://E:/ecpmonitor/ecp-monitor/ecp-skywalking" charset="UTF-8" />
+    <file url="file://E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-api" charset="UTF-8" />
+    <file url="file://E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-dubbo-plugin" charset="UTF-8" />
+    <file url="file://E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-jdbc-plugin" charset="UTF-8" />
+    <file url="file://E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-log4j-1.x-plugin" charset="UTF-8" />
+    <file url="file://E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-log4j-2.x-plugin" charset="UTF-8" />
+    <file url="file://E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-protocol" charset="UTF-8" />
+    <file url="file://E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-server" charset="UTF-8" />
+    <file url="file://E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-spring-plugin" charset="UTF-8" />
+    <file url="file://E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-web-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services-quartz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-common-intefaces" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-aip" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-aip/build-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-cms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-cms/build-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-coupon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-coupon/build-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-demo/build-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-goods" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-goods/build-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-im" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-order/build-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-prom" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-prom/build-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-publish" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-search/build-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-staff" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-staff/build-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-sys" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-sys/build-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-aip-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-im" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mall" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mall-point" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mall-point/build-jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mall/build-jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-manage" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-manage/build-jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-manage/build-mobile-jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-manage/build-template-jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mobile" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mobile-point" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mobile/build-jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/web-build-jar" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cyp.gp.hall.mapper.ImageMapper" >
+  <resultMap id="BaseResultMap" type="com.cyp.gp.hall.dao.Image" >
+    <id column="imageid" property="imageid" jdbcType="VARCHAR" />
+    <result column="imageshow" property="imageshow" jdbcType="VARCHAR" />
+    <result column="imageshow1" property="imageshow1" jdbcType="VARCHAR" />
+    <result column="imageshow2" property="imageshow2" jdbcType="VARCHAR" />
+    <result column="imageshow3" property="imageshow3" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    imageid, imageshow, imageshow1, imageshow2, imageshow3
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.cyp.gp.hall.dao.ImageExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from image
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from image
+    where imageid = #{imageid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from image
+    where imageid = #{imageid,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.cyp.gp.hall.dao.ImageExample" >
+    delete from image
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.cyp.gp.hall.dao.Image" >
+    insert into image (imageid, imageshow, imageshow1, 
+      imageshow2, imageshow3)
+    values (#{imageid,jdbcType=VARCHAR}, #{imageshow,jdbcType=VARCHAR}, #{imageshow1,jdbcType=VARCHAR}, 
+      #{imageshow2,jdbcType=VARCHAR}, #{imageshow3,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cyp.gp.hall.dao.Image" >
+    insert into image
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="imageid != null" >
+        imageid,
+      </if>
+      <if test="imageshow != null" >
+        imageshow,
+      </if>
+      <if test="imageshow1 != null" >
+        imageshow1,
+      </if>
+      <if test="imageshow2 != null" >
+        imageshow2,
+      </if>
+      <if test="imageshow3 != null" >
+        imageshow3,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="imageid != null" >
+        #{imageid,jdbcType=VARCHAR},
+      </if>
+      <if test="imageshow != null" >
+        #{imageshow,jdbcType=VARCHAR},
+      </if>
+      <if test="imageshow1 != null" >
+        #{imageshow1,jdbcType=VARCHAR},
+      </if>
+      <if test="imageshow2 != null" >
+        #{imageshow2,jdbcType=VARCHAR},
+      </if>
+      <if test="imageshow3 != null" >
+        #{imageshow3,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.cyp.gp.hall.dao.ImageExample" resultType="java.lang.Integer" >
+    select count(*) from image
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update image
+    <set >
+      <if test="record.imageid != null" >
+        imageid = #{record.imageid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageshow != null" >
+        imageshow = #{record.imageshow,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageshow1 != null" >
+        imageshow1 = #{record.imageshow1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageshow2 != null" >
+        imageshow2 = #{record.imageshow2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageshow3 != null" >
+        imageshow3 = #{record.imageshow3,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update image
+    set imageid = #{record.imageid,jdbcType=VARCHAR},
+      imageshow = #{record.imageshow,jdbcType=VARCHAR},
+      imageshow1 = #{record.imageshow1,jdbcType=VARCHAR},
+      imageshow2 = #{record.imageshow2,jdbcType=VARCHAR},
+      imageshow3 = #{record.imageshow3,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cyp.gp.hall.dao.Image" >
+    update image
+    <set >
+      <if test="imageshow != null" >
+        imageshow = #{imageshow,jdbcType=VARCHAR},
+      </if>
+      <if test="imageshow1 != null" >
+        imageshow1 = #{imageshow1,jdbcType=VARCHAR},
+      </if>
+      <if test="imageshow2 != null" >
+        imageshow2 = #{imageshow2,jdbcType=VARCHAR},
+      </if>
+      <if test="imageshow3 != null" >
+        imageshow3 = #{imageshow3,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where imageid = #{imageid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cyp.gp.hall.dao.Image" >
+    update image
+    set imageshow = #{imageshow,jdbcType=VARCHAR},
+      imageshow1 = #{imageshow1,jdbcType=VARCHAR},
+      imageshow2 = #{imageshow2,jdbcType=VARCHAR},
+      imageshow3 = #{imageshow3,jdbcType=VARCHAR}
+    where imageid = #{imageid,jdbcType=VARCHAR}
+  </update>
+</mapper>

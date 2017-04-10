@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://E:/ecpmonitor/ecp-monitor/monitor-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-im" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mall" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mall-point" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-manage" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mobile" />
+    <file type="web" url="file://$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mobile-point" />
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/pom.xml" />
+        <option value="E:/ecpmonitor/ecp-monitor/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-api/pom.xml" />
+        <option value="E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-dubbo-plugin/pom.xml" />
+        <option value="E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-jdbc-plugin/pom.xml" />
+        <option value="E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-log4j-1.x-plugin/pom.xml" />
+        <option value="E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-log4j-2.x-plugin/pom.xml" />
+        <option value="E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-protocol/pom.xml" />
+        <option value="E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-server/pom.xml" />
+        <option value="E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-spring-plugin/pom.xml" />
+        <option value="E:/ecpmonitor/ecp-monitor/ecp-skywalking/ecp-skywalking-web-plugin/pom.xml" />
+        <option value="E:/ecpmonitor/ecp-monitor/ecp-skywalking/pom.xml" />
+        <option value="E:/ecpmonitor/ecp-monitor/monitor-web/pom.xml" />
+        <option value="E:/ecpmonitor/ecp-monitor/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services-quartz/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-common-intefaces/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-aip/build-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-aip/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-cms/build-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-cms/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-coupon/build-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-coupon/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-demo/build-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-goods/build-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-goods/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-im/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-order/build-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-order/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-prom/build-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-prom/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-publish/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-search/build-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-search/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-staff/build-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-staff/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-sys/build-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/ecp-services-sys/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-services/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-aip-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-im/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mall-point/build-jar/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mall-point/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mall/build-jar/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mall/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-manage/build-jar/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-manage/build-mobile-jar/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-manage/build-template-jar/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-manage/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mobile-point/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mobile/build-jar/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/ecp-web-mobile/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/ecp-web/web-build-jar/pom.xml" />
+        <option value="$PROJECT_DIR$/../ecp-busi/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

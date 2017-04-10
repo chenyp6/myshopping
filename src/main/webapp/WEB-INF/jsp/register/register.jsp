@@ -185,7 +185,7 @@
             <h3>Register Now</h3>
             <p>Welcome, please enter the following details to continue.</p>
             <p>If you have previously registered with us, <a href="#">click here</a></p>
-            <form href="/myshopping/registeruser">
+            <form action="/myshopping/registeruser" method="post">
                 <ul>
                     <li class="text-info">User Name: </li>
                     <li><input type="text" id="userid" name="userid" value=""><span style="font-weight:bold" id="checkuserid"></span></li>

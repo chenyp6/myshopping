@@ -32,6 +32,7 @@
     <!-- FlexSlider -->
     <script src="/js/tool/imagezoom.js"></script>
     <script defer src="/js/tool/jquery.flexslider.js"></script>
+    <script src="/js/login/login.js"></script>
     <link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="screen" />
 
     <script>
@@ -186,11 +187,11 @@
                 <div class="strip"></div>
                 <p>Welcome, please enter the following to continue.</p>
                 <p>If you have previously Login with us, <a href="#">Click Here</a></p>
-                <form>
+                <form action="/myshopping/checkuser" method="post">
                     <h5>User Name:</h5>
-                    <input type="text" value="">
+                    <input id="userid" type="text" value="">
                     <h5>Password:</h5>
-                    <input type="password" value=""><br>
+                    <input id="pwd" type="password" value=""><br>
                     <input type="submit" value="Login">
 
                 </form>

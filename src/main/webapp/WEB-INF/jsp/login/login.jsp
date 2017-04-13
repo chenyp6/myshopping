@@ -189,9 +189,9 @@
                 <p>If you have previously Login with us, <a href="#">Click Here</a></p>
                 <form action="/myshopping/checkuser" method="post">
                     <h5>User Name:</h5>
-                    <input id="userid" type="text" value="">
+                    <input id="userid" name="userid" type="text" value="${usersDTO.userid}">
                     <h5>Password:</h5>
-                    <input id="pwd" type="password" value=""><br>
+                    <input id="pwd" name="pwd" type="password" value=""><span style="color: red;">${mes}</span><br>
                     <input type="submit" value="Login">
 
                 </form>

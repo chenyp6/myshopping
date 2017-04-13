@@ -208,7 +208,7 @@
       shoeslevel = #{shoeslevel,jdbcType=INTEGER}
     where shoesid = #{shoesid,jdbcType=VARCHAR}
   </update>
-  <select id="getShoesid" resultType="java.lang.String">
-    SELECT shoesid FROM  indexshoes
+  <select id="getShoesMes" resultType="com.cyp.gp.hall.dto.indexshoesDTO">
+    SELECT shoesid,price FROM  indexshoes
   </select>
 </mapper>

@@ -30,7 +30,6 @@ $(function () {
             dataType:"json",
             chche: false,
             data:{
-                'userid': '123',
                 'shoesid': $("#shoesid").val(),
                 'imagepath':'/images/'+$("#shoesid").val()+".jsp",
                 'size':$("#shoessize option:selected").val(),

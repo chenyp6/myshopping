@@ -6,6 +6,7 @@ import com.cyp.gp.hall.mapper.IndexshoesMapper;
 import com.cyp.gp.hall.service.interfaces.HallService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.cyp.gp.hall.dto.indexshoesDTO;
 
 import java.util.List;
 
@@ -21,9 +22,9 @@ public class HallServiceImpl implements HallService {
         return image;
     }
 
-    public List<String>GetIndexshoesids()throws Exception{
-        List<String> shoesids=indexshoesMapper.getShoesid();
-        return shoesids;
+    public List<indexshoesDTO>GetIndexshoesMES()throws Exception{
+        List<indexshoesDTO> shoesMes=indexshoesMapper.getShoesMes();
+        return shoesMes;
     }
 
 }

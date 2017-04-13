@@ -10,6 +10,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * Created by admin on 2017/4/10.
  */
@@ -32,11 +35,11 @@ public class SingleController {
 
     @RequestMapping("/addtocart")
     @ResponseBody
-    public ModelMap addtocart(CartVO cartVO)throws Exception{
+    public ModelMap addtocart(CartVO cartVO, HttpServletRequest request)throws Exception{
         ModelMap model=new ModelMap();
 
         Cart cart=new Cart();
-        cart.setUserid(cartVO.getUserid());
+        cart.setUserid((String)request.getSession().getAttribute("userid"));
         cart.setShoesid(cartVO.getShoesid());
         cart.setImagepath(cartVO.getImagepath());
         cart.setSize(cartVO.getSize());

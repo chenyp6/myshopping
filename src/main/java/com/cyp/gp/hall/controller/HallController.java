@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.cyp.gp.hall.service.interfaces.HallService;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import com.cyp.gp.hall.dto.indexshoesDTO;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -32,16 +34,23 @@ public class HallController {
         return modelAndView;
     }
 
-    @RequestMapping("/queryindex")
+    @RequestMapping("/queryhall")
     @ResponseBody
     public ModelMap querysingle()throws Exception{
         ModelMap model=new ModelMap();
-        List<String> list=hallService.GetIndexshoesids();
+        List<indexshoesDTO> list=hallService.GetIndexshoesMES();
         int i=1;
-        for(String t :list){
+        for(indexshoesDTO t :list){
             model.addAttribute("indexshoes"+i,t);
             i++;
         }
         return model;
     }
+
+    @RequestMapping("logout")
+    public String logout(HttpServletRequest request){
+        request.getSession().removeAttribute("userid");
+        return "login/login";
+    }
+
 }

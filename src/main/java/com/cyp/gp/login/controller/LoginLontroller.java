@@ -1,13 +1,14 @@
 package com.cyp.gp.login.controller;
 
 import com.cyp.gp.login.service.interfaces.LoginService;
-import com.cyp.gp.register.dto.UsersDTO;
+import com.cyp.gp.login.dto.UsersDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.enterprise.inject.Model;
 import javax.servlet.http.HttpServletRequest;
@@ -28,15 +29,20 @@ public class LoginLontroller {
     }
 
     @RequestMapping("/checkuser")
-    public String checkuser(@ModelAttribute("userid")UsersDTO usersDTO, HttpServletRequest request)throws Exception{
-        if(loginService.CheckUser(usersDTO.getUserid())==0){
-            ModelMap model=new ModelMap();
-            model.addAttribute("userid",usersDTO.getUserid());
+    public String checkuser(UsersDTO usersDTO,ModelMap model,HttpServletRequest request)throws Exception{
+        if(loginService.CheckUser(usersDTO)==0){
+           /* modelAndView.addObject("userid",usersDTO.getUserid());
+            modelAndView.addObject("mes","wrong password!");
+            modelAndView.setViewName("login/login");*/
+           model.addAttribute("usersDTO",usersDTO);
             return "login/login";
         }
         else{
-           request.getSession().setAttribute("userid",usersDTO.getUserid());
-            return "redirect:/myshopping";
+            request.getSession().setAttribute("userid",usersDTO.getUserid());
+            model.addAttribute("userexits","1");
+            model.addAttribute("userid",usersDTO.getUserid());
+           // modelAndView.setViewName("hall/hall");
+            return "hall/hall";
         }
     }
 }

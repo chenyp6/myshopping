@@ -4,6 +4,7 @@ import com.cyp.gp.hall.dao.Indexshoes;
 import com.cyp.gp.hall.dao.IndexshoesExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import com.cyp.gp.hall.dto.indexshoesDTO;
 
 public interface IndexshoesMapper {
     int countByExample(IndexshoesExample example);
@@ -16,7 +17,7 @@ public interface IndexshoesMapper {
 
     int insertSelective(Indexshoes record);
 
-    List<String> getShoesid();
+    List<indexshoesDTO> getShoesMes();
 
     List<Indexshoes> selectByExample(IndexshoesExample example);
 

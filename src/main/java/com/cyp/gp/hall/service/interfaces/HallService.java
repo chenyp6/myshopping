@@ -1,7 +1,7 @@
 package com.cyp.gp.hall.service.interfaces;
 
 import com.cyp.gp.hall.dao.Image;
-
+import com.cyp.gp.hall.dto.indexshoesDTO;
 import java.util.List;
 
 /**
@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface HallService {
     public Image Getshowimage(String imageid)throws Exception;
-    public List<String> GetIndexshoesids()throws Exception;
+    public List<indexshoesDTO> GetIndexshoesMES()throws Exception;
 }

@@ -96,12 +96,12 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men<b class="caret"></b></a>
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Men<b class="caret"></b></a>
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="row">
                                         <div class="col-sm-4 menu-img-pad">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="products.html">Joggers</a></li>
+                                                <li><a href="/myshopping/menshoes">Joggers</a></li>
                                                 <li><a href="products.html">Foot Ball</a></li>
                                                 <li><a href="products.html">Cricket</a></li>
                                                 <li class="divider"></li>
@@ -141,9 +141,9 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">kids<b class="caret"></b></a>
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">kids<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="products.html">Tees</a></li>
+                                    <li><a href="/myshopping/childrenshoes">Tees</a></li>
                                     <li><a href="products.html">Shorts</a></li>
                                     <li><a href="products.html">Gear</a></li>
                                     <li class="divider"></li>

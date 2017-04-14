@@ -3,6 +3,8 @@ package com.cyp.gp.children.mapper;
 import com.cyp.gp.children.dao.Childrenshoes;
 import com.cyp.gp.children.dao.ChildrenshoesExample;
 import java.util.List;
+
+import com.cyp.gp.children.dto.ChildrenShoesDTO;
 import org.apache.ibatis.annotations.Param;
 
 public interface ChildrenshoesMapper {
@@ -17,6 +19,8 @@ public interface ChildrenshoesMapper {
     int insertSelective(Childrenshoes record);
 
     List<Childrenshoes> selectByExample(ChildrenshoesExample example);
+
+    List<ChildrenShoesDTO> selectByPage(int page);
 
     Childrenshoes selectByPrimaryKey(String shoesid);
 

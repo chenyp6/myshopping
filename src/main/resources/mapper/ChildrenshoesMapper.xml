@@ -208,4 +208,8 @@
       shoeslevel = #{shoeslevel,jdbcType=INTEGER}
     where shoesid = #{shoesid,jdbcType=VARCHAR}
   </update>
+  <select id="selectByPage" parameterType="int" resultType="com.cyp.gp.children.dto.ChildrenShoesDTO">
+    select shoesid,price from childrenshoes limit #{page},12
+  </select>
+
 </mapper>

@@ -40,7 +40,7 @@
                 <a class="btn btn-default log-bar" id="signup" href="/myshopping/register" role="button">Sign up</a>
                 <a class="btn btn-default log-bar" id="login" href="/myshopping/login" role="button">Login</a>
                 <div class="cart box_1">
-                    <a href="checkout.html">
+                    <a href="/myshopping/cart">
                         <h3>
                             <div class="total">
                                 <span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div></h3>

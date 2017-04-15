@@ -1,9 +1,14 @@
-
+<%--
+  Created by IntelliJ IDEA.
+  User: admin
+  Date: 2017/4/15
+  Time: 10:24
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page isELIgnored="false" %>
 <html lang="en">
 <head>
-    <title>Single</title>
+    <title>Checkout</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
@@ -27,8 +32,9 @@
     <!-- FlexSlider -->
     <script src="/js/tool/imagezoom.js"></script>
     <script defer src="/js/tool/jquery.flexslider.js"></script>
+    <script src="/js/cart/cart.js"></script>
     <link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="screen" />
-    <script src="/js/single/single.js"></script>
+
     <script>
         // Can also be used with $(document).ready()
         $(window).load(function() {
@@ -41,7 +47,6 @@
     <!-- //FlexSlider-->
 </head>
 <body>
-<input type="hidden" id="shoesid" value="${shoesid}">
 <div class="header">
     <div class="container">
         <div class="header-top">
@@ -52,7 +57,7 @@
                 <a class="btn btn-default log-bar" href="/myshopping/register" role="button">Sign up</a>
                 <a class="btn btn-default log-bar" href="/myshopping/login" role="button">Login</a>
                 <div class="cart box_1">
-                    <a href="/myshopping/cart">
+                    <a href="checkout.html">
                         <h3>
                             <div class="total">
                                 <span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div></h3>
@@ -97,7 +102,7 @@
                                     <div class="row">
                                         <div class="col-sm-4 menu-img-pad">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="products.html">Joggers</a></li>
+                                                <li><a href="/myshopping/menshoes">Joggers</a></li>
                                                 <li><a href="products.html">Foot Ball</a></li>
                                                 <li><a href="products.html">Cricket</a></li>
                                                 <li class="divider"></li>
@@ -121,7 +126,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="products.html">Tops</a></li>
+                                                <li><a href="/myshopping/womenshoes">Tops</a></li>
                                                 <li><a href="products.html">Bottoms</a></li>
                                                 <li><a href="products.html">Yoga Pants</a></li>
                                                 <li class="divider"></li>
@@ -139,7 +144,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">kids<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="products.html">Tees</a></li>
+                                    <li><a href="/myshopping/childrenshoes">Tees</a></li>
                                     <li><a href="products.html">Shorts</a></li>
                                     <li><a href="products.html">Gear</a></li>
                                     <li class="divider"></li>
@@ -167,198 +172,85 @@
 <div class="head-bread">
     <div class="container">
         <ol class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Men</a></li>
-            <li class="active">Shop</li>
+            <li><a href="/myshopping">Home</a></li>
+            <li><a href="/myshopping">Products</a></li>
+            <li class="active">CART</li>
         </ol>
     </div>
 </div>
-<div class="showcase-grid">
+<!-- check-out -->
+<div class="check">
     <div class="container">
-        <div class="col-md-8 showcase">
-            <div class="flexslider">
-                <ul class="slides">
-                    <li id="data-thumb" data-thumb="${mshow}">
-                        <div class="thumb-image"> <img src="${mshow}" id="show" data-imagezoom="true" class="img-responsive"> </div>
-                    </li>
-                    <li id="data-thumb1" data-thumb="${mshow1}">
-                        <div class="thumb-image"> <img src="${mshow1}" id="show1" data-imagezoom="true" class="img-responsive"> </div>
-                    </li>
-                    <li id="data-thumb2" data-thumb="${mshow2}">
-                        <div class="thumb-image"> <img src="${mshow2}" id="show2" data-imagezoom="true" class="img-responsive"> </div>
-                    </li>
-                    <li id="data-thumb3" data-thumb="${mshow3}">
-                        <div class="thumb-image"> <img src="${mshow3}" id="show3" data-imagezoom="true" class="img-responsive"> </div>
-                    </li>
-                </ul>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <div class="col-md-4 showcase">
-            <div class="showcase-rt-top">
-                <div class="pull-left shoe-name">
-                    <h3 id="shoesname"></h3>
-                    <p id="introduction"></p>
-                    <h4>&#36;<span id="shoesprice"></span></h4>
-                </div>
-                <div class="pull-left rating-stars">
-                    <ul>
-                        <li><a href="#" class="active"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
-                        <li><a href="#" class="active"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
-                        <li><a href="#" class="active"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
-                        <li><a href="#" id="shoeslevel4" ><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
-                        <li><a href="#" id="shoeslevel5"><span class="glyphicon glyphicon-star star-stn" aria-hidden="true"></span></a></li>
-                    </ul>
-                </div>
+        <div class="col-md-3 cart-total">
+            <a class="continue" href="#">Continue to basket</a>
+            <div class="price-details">
+                <h3>Price Details</h3>
+                <span>Total</span>
+                <span id="total" class="total1">6200.00</span>
+                <span>Discount</span>
+                <span class="total1">0%(Festival Offer)</span>
+                <span>Delivery Charges</span>
+                <span class="total1">0.00</span>
                 <div class="clearfix"></div>
             </div>
             <hr class="featurette-divider">
-            <div class="shocase-rt-bot">
-                <div class="float-qty-chart">
-                    <ul>
-                        <li class="qty">
-                            <h3>Size Chart</h3>
-                            <select id="shoessize" class="form-control siz-chrt">
-                                <option>6 US</option>
-                                <option>7 US</option>
-                                <option>8 US</option>
-                                <option>9 US</option>
-                                <option>10 US</option>
-                                <option>11 US</option>
-                            </select>
-                        </li>
-                        <li class="qty">
-                            <h4>QTY</h4>
-                            <select id="number" class="form-control qnty-chrt">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                            </select>
-                        </li>
-                    </ul>
+            <ul class="total_price">
+                <li class="last_price"> <h4>TOTAL</h4></li>
+                <li  class="last_price"><span id="last_price">6150.00</span></li>
+                <div class="clearfix"> </div>
+            </ul>
+            <div class="clearfix"></div>
+            <a class="order" href="#">Place Order</a>
+        </div>
+        <div id="cart" class="col-md-9 cart-items">
+            <h1>My Shopping Bag</h1>
+            <%--<div class="cart-header">
+                <div class="close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+                <div class="cart-sec simpleCart_shelfItem">
+                    <div class="cart-item cyc">
+                        <img src="/images/grid8.jpg" class="img-responsive" alt=""/>
+                    </div>
+                    <div class="cart-item-info">
+                        <ul class="qty">
+                            <li><p>Size : 9 US</p></li>
+                            <li><p>Qty : 1</p></li>
+                            <li><p>Price each : $190</p></li>
+                        </ul>
+                        <div class="delivery">
+                            <p>Service Charges : Rs.190.00</p>
+                            <span>Delivered in 2-3 bussiness days</span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                </div>
+            </div>
+            <div class="cart-header">
+                <div class="close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+                <div class="cart-sec simpleCart_shelfItem">
+                    <div class="cart-item cyc">
+                        <img src="/images/grid7.jpg" class="img-responsive" alt=""/>
+                    </div>
+                    <div class="cart-item-info">
+                        <ul class="qty">
+                            <li><p>Size : 8 US</p></li>
+                            <li><p>Qty : 2</p></li>
+                            <li><p>Price each : $190</p></li>
+                        </ul>
+                        <div class="delivery">
+                            <p>Service Charges : Rs.360.00</p>
+                            <span>Delivered in 2-3 bussiness days</span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
                     <div class="clearfix"></div>
                 </div>
-                <ul>
-                    <li class="ad-2-crt simpleCart_shelfItem">
-                        <a class="btn item_add" id="AddToCart"  href="javascript:void(0);" role="button">Add To Cart</a>
-                        <a class="btn" href="#" role="button">Buy Now</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="showcase-last">
-                <h3>product details</h3>
-                <ul>
-                    <li>Internal bootie wraps your foot for a sock-like fit</li>
-                    <li>Unique eyestays work with the Flywire cables to create an even better glove-like fit</li>
-                    <li>Waffle outsole for durability and multi-surface traction</li>
-                    <li>Sculpted Cushlon midsole combines plush cushioning and springy resilience for impact protection</li>
-                    <li>Midsole flex grooves for greater forefoot flexibility</li>
-                </ul>
             </div>
         </div>
-        <div class="clearfix"></div>
+        <div class="clearfix"> </div>--%>
     </div>
 </div>
-
-<div class="specifications">
-    <div class="container">
-        <h3>Item Details</h3>
-        <div class="detai-tabs">
-            <!-- Nav tabs -->
-            <ul class="nav nav-pills tab-nike" role="tablist">
-                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Highlights</a></li>
-                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Description</a></li>
-                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Terms & conditiona</a></li>
-            </ul>
-
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="home">
-                    <p>The full-length Max Air unit delivers excellent cushioning with enhanced flexibility for smoother transitions through footstrike.</p>
-                    <p>Dynamic Flywire cables integrate with the laces and wrap your midfoot for a truly adaptive, supportive fit.</p>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="profile">
-                    <p>Nike is one of the leading manufacturer and supplier of sports equipment, footwear and apparels. Nike is a global brand and it continuously creates products using high technology and design innovation. Nike has a vast collection of sports shoes for men at Snapdeal. You can explore our range of basketball shoes, football shoes, cricket shoes, tennis shoes, running shoes, daily shoes or lifestyle shoes. Take your pick from an array of sports shoes in vibrant colours like red, yellow, green, blue, brown, black, grey, olive, pink, beige and white. Designed for top performance, these shoes match the way you play or run. Available in materials like leather, canvas, suede leather, faux leather, mesh etc, these shoes are lightweight, comfortable, sturdy and extremely sporty. The sole of all Nike shoes is designed to provide an increased amount of comfort and the material is good enough to provide an improved fit. These shoes are easy to maintain and last for a really long time given to their durability. Buy Nike shoes for men online with us at some unbelievable discounts and great prices. So get faster and run farther with your Nike shoes and track how hard you can play.</p>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="messages">
-                    The images represent actual product though color of the image and product may slightly differ.
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="you-might-like">
-    <div class="container">
-        <h3 class="you-might">Products You May Like</h3>
-        <div class="col-md-4 grid-stn simpleCart_shelfItem">
-            <!-- normal -->
-            <div class="ih-item square effect3 bottom_to_top">
-                <div class="bottom-2-top">
-                    <div class="img"><img src="/images/grid4.jpg" alt="/" class="img-responsive gri-wid"></div>
-                    <div class="info">
-                        <div class="pull-left styl-hdn">
-                            <h3>style 01</h3>
-                        </div>
-                        <div class="pull-right styl-price">
-                            <p><a  href="#" class="item_add"><span class="glyphicon glyphicon-shopping-cart grid-cart" aria-hidden="true"></span> <span class=" item_price">$190</span></a></p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div></div>
-            </div>
-            <!-- end normal -->
-            <div class="quick-view">
-                <a href="/myshopping/single">Quick view</a>
-            </div>
-        </div>
-        <div class="col-md-4 grid-stn simpleCart_shelfItem">
-            <!-- normal -->
-            <div class="ih-item square effect3 bottom_to_top">
-                <div class="bottom-2-top">
-                    <div class="img"><img src="/images/grid6.jpg" alt="/" class="img-responsive gri-wid"></div>
-                    <div class="info">
-                        <div class="pull-left styl-hdn">
-                            <h3>style 01</h3>
-                        </div>
-                        <div class="pull-right styl-price">
-                            <p><a  href="#" class="item_add"><span class="glyphicon glyphicon-shopping-cart grid-cart" aria-hidden="true"></span> <span class=" item_price">$190</span></a></p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div></div>
-            </div>
-            <!-- end normal -->
-            <div class="quick-view">
-                <a href="/myshopping/single">Quick view</a>
-            </div>
-        </div>
-        <div class="col-md-4 grid-stn simpleCart_shelfItem">
-            <!-- normal -->
-            <div class="ih-item square effect3 bottom_to_top">
-                <div class="bottom-2-top">
-                    <div class="img"><img src="/images/grid3.jpg" alt="/" class="img-responsive gri-wid"></div>
-                    <div class="info">
-                        <div class="pull-left styl-hdn">
-                            <h3>style 01</h3>
-                        </div>
-                        <div class="pull-right styl-price">
-                            <p><a  href="#" class="item_add"><span class="glyphicon glyphicon-shopping-cart grid-cart" aria-hidden="true"></span> <span class=" item_price">$190</span></a></p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div></div>
-            </div>
-            <!-- end normal -->
-            <div class="quick-view">
-                <a href="/myshopping/single">Quick view</a>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-
 <div class="footer-grid">
     <div class="container">
         <div class="col-md-2 re-ft-grd">

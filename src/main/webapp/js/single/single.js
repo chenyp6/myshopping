@@ -31,7 +31,7 @@ $(function () {
             chche: false,
             data:{
                 'shoesid': $("#shoesid").val(),
-                'imagepath':'/images/'+$("#shoesid").val()+".jsp",
+                'imagepath':'/images/'+$("#shoesid").val()+".jpg",
                 'size':$("#shoessize option:selected").val(),
                 'number':$("#number option:selected").val(),
                 'price':$("#shoesprice").text()

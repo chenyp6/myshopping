@@ -211,5 +211,10 @@
   <select id="selectByPage" parameterType="int" resultType="com.cyp.gp.men.dto.MenshoesDTO">
     select shoesid,price from menshoes limit #{page},12
   </select>
-
+  <select id="selectToAdminByPage" parameterType="int" resultType="com.cyp.gp.men.dao.Menshoes">
+    select * from menshoes limit #{page},10
+  </select>
+  <select id="GetMenShoesCounts"  resultType="int">
+    select count(*) from menshoes
+  </select>
 </mapper>

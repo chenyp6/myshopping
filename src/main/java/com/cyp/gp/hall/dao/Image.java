@@ -3,6 +3,8 @@ package com.cyp.gp.hall.dao;
 public class Image {
     private String imageid;
 
+    private String indeximage;
+
     private String imageshow;
 
     private String imageshow1;
@@ -17,6 +19,14 @@ public class Image {
 
     public void setImageid(String imageid) {
         this.imageid = imageid == null ? null : imageid.trim();
+    }
+
+    public String getIndeximage() {
+        return indeximage;
+    }
+
+    public void setIndeximage(String indeximage) {
+        this.indeximage = indeximage == null ? null : indeximage.trim();
     }
 
     public String getImageshow() {

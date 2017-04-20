@@ -22,7 +22,11 @@ public interface WomenshoesMapper {
 
     List<Womenshoes> selectByExample(WomenshoesExample example);
 
+    List<Womenshoes> selectToAdminByPage(int page);
+
     Womenshoes selectByPrimaryKey(String shoesid);
+
+    int GetWomenShoesCounts();
 
     int updateByExampleSelective(@Param("record") Womenshoes record, @Param("example") WomenshoesExample example);
 

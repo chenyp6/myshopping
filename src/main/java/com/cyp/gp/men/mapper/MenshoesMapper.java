@@ -22,6 +22,10 @@ public interface MenshoesMapper {
 
     List<MenshoesDTO> selectByPage(int page);
 
+    List<Menshoes>  selectToAdminByPage(int page);
+
+    int GetMenShoesCounts();
+
     Menshoes selectByPrimaryKey(String shoesid);
 
     int updateByExampleSelective(@Param("record") Menshoes record, @Param("example") MenshoesExample example);

@@ -174,6 +174,76 @@ public class ImageExample {
             return (Criteria) this;
         }
 
+        public Criteria andIndeximageIsNull() {
+            addCriterion("indeximage is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageIsNotNull() {
+            addCriterion("indeximage is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageEqualTo(String value) {
+            addCriterion("indeximage =", value, "indeximage");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageNotEqualTo(String value) {
+            addCriterion("indeximage <>", value, "indeximage");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageGreaterThan(String value) {
+            addCriterion("indeximage >", value, "indeximage");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageGreaterThanOrEqualTo(String value) {
+            addCriterion("indeximage >=", value, "indeximage");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageLessThan(String value) {
+            addCriterion("indeximage <", value, "indeximage");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageLessThanOrEqualTo(String value) {
+            addCriterion("indeximage <=", value, "indeximage");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageLike(String value) {
+            addCriterion("indeximage like", value, "indeximage");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageNotLike(String value) {
+            addCriterion("indeximage not like", value, "indeximage");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageIn(List<String> values) {
+            addCriterion("indeximage in", values, "indeximage");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageNotIn(List<String> values) {
+            addCriterion("indeximage not in", values, "indeximage");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageBetween(String value1, String value2) {
+            addCriterion("indeximage between", value1, value2, "indeximage");
+            return (Criteria) this;
+        }
+
+        public Criteria andIndeximageNotBetween(String value1, String value2) {
+            addCriterion("indeximage not between", value1, value2, "indeximage");
+            return (Criteria) this;
+        }
+
         public Criteria andImageshowIsNull() {
             addCriterion("imageshow is null");
             return (Criteria) this;

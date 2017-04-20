@@ -3,6 +3,7 @@
 <mapper namespace="com.cyp.gp.hall.mapper.ImageMapper" >
   <resultMap id="BaseResultMap" type="com.cyp.gp.hall.dao.Image" >
     <id column="imageid" property="imageid" jdbcType="VARCHAR" />
+    <result column="indeximage" property="indeximage" jdbcType="VARCHAR" />
     <result column="imageshow" property="imageshow" jdbcType="VARCHAR" />
     <result column="imageshow1" property="imageshow1" jdbcType="VARCHAR" />
     <result column="imageshow2" property="imageshow2" jdbcType="VARCHAR" />
@@ -67,7 +68,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    imageid, imageshow, imageshow1, imageshow2, imageshow3
+    imageid, indeximage, imageshow, imageshow1, imageshow2, imageshow3
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.cyp.gp.hall.dao.ImageExample" >
     select
@@ -100,16 +101,21 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.cyp.gp.hall.dao.Image" >
-    insert into image (imageid, imageshow, imageshow1, 
-      imageshow2, imageshow3)
-    values (#{imageid,jdbcType=VARCHAR}, #{imageshow,jdbcType=VARCHAR}, #{imageshow1,jdbcType=VARCHAR}, 
-      #{imageshow2,jdbcType=VARCHAR}, #{imageshow3,jdbcType=VARCHAR})
+    insert into image (imageid, indeximage, imageshow, 
+      imageshow1, imageshow2, imageshow3
+      )
+    values (#{imageid,jdbcType=VARCHAR}, #{indeximage,jdbcType=VARCHAR}, #{imageshow,jdbcType=VARCHAR}, 
+      #{imageshow1,jdbcType=VARCHAR}, #{imageshow2,jdbcType=VARCHAR}, #{imageshow3,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.cyp.gp.hall.dao.Image" >
     insert into image
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="imageid != null" >
         imageid,
+      </if>
+      <if test="indeximage != null" >
+        indeximage,
       </if>
       <if test="imageshow != null" >
         imageshow,
@@ -127,6 +133,9 @@
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="imageid != null" >
         #{imageid,jdbcType=VARCHAR},
+      </if>
+      <if test="indeximage != null" >
+        #{indeximage,jdbcType=VARCHAR},
       </if>
       <if test="imageshow != null" >
         #{imageshow,jdbcType=VARCHAR},
@@ -154,6 +163,9 @@
       <if test="record.imageid != null" >
         imageid = #{record.imageid,jdbcType=VARCHAR},
       </if>
+      <if test="record.indeximage != null" >
+        indeximage = #{record.indeximage,jdbcType=VARCHAR},
+      </if>
       <if test="record.imageshow != null" >
         imageshow = #{record.imageshow,jdbcType=VARCHAR},
       </if>
@@ -174,6 +186,7 @@
   <update id="updateByExample" parameterType="map" >
     update image
     set imageid = #{record.imageid,jdbcType=VARCHAR},
+      indeximage = #{record.indeximage,jdbcType=VARCHAR},
       imageshow = #{record.imageshow,jdbcType=VARCHAR},
       imageshow1 = #{record.imageshow1,jdbcType=VARCHAR},
       imageshow2 = #{record.imageshow2,jdbcType=VARCHAR},
@@ -185,6 +198,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.cyp.gp.hall.dao.Image" >
     update image
     <set >
+      <if test="indeximage != null" >
+        indeximage = #{indeximage,jdbcType=VARCHAR},
+      </if>
       <if test="imageshow != null" >
         imageshow = #{imageshow,jdbcType=VARCHAR},
       </if>
@@ -202,7 +218,8 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.cyp.gp.hall.dao.Image" >
     update image
-    set imageshow = #{imageshow,jdbcType=VARCHAR},
+    set indeximage = #{indeximage,jdbcType=VARCHAR},
+      imageshow = #{imageshow,jdbcType=VARCHAR},
       imageshow1 = #{imageshow1,jdbcType=VARCHAR},
       imageshow2 = #{imageshow2,jdbcType=VARCHAR},
       imageshow3 = #{imageshow3,jdbcType=VARCHAR}

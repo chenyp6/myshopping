@@ -29,4 +29,10 @@ public interface AdminService {
 
     int AddNewimage(String imageid);
 
+    List<MenshoesDTO> FuzzySerchMenshoesByIndex(String index);
+
+    List<WomenshoesDTO> FuzzySerchWomenshoesByIndex(String index);
+
+    List<ChildrenshoesDTO> FuzzySerchChildrenshoesByIndex(String index);
+
 }

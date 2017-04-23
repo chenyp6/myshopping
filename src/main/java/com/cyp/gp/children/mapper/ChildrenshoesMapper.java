@@ -24,6 +24,8 @@ public interface ChildrenshoesMapper {
 
     List<Childrenshoes> selectToAdminByPage(int page);
 
+    List<Childrenshoes> FuzzySerchByIndex(String index);
+
     int GetChildrenShoesCounts();
 
     Childrenshoes selectByPrimaryKey(String shoesid);

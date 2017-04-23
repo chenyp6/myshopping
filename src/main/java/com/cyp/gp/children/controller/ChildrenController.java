@@ -19,16 +19,16 @@ public class ChildrenController {
     @Autowired
     ChildrenService childrenService;
 
-    @RequestMapping("childrenshoes")
+    @RequestMapping("/childrenshoes")
     public String childrenshoes(){
-        return "/children/childrenshoes";
+        return "children/childrenshoes";
     }
 
     @RequestMapping("querychildrenshoes")
     @ResponseBody
     public ModelMap querychildrenshoes(String page){
         ModelMap model=new ModelMap();
-        List<ChildrenShoesDTO> childrenShoesDTOs = childrenService.GetChildrenShoesByPage((Integer.parseInt(page)-1)*12+1);
+        List<ChildrenShoesDTO> childrenShoesDTOs = childrenService.GetChildrenShoesByPage((Integer.parseInt(page)-1)*12);
         model.addAttribute("childrenshoesDTOs",childrenShoesDTOs);
         return model;
     }

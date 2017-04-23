@@ -27,8 +27,10 @@ public class MenController {
     @ResponseBody
     public ModelMap querymenshoes(String page){
         ModelMap model=new ModelMap();
-        List<MenshoesDTO> menshoesDTOs=menService.GetMenShoesByPage((Integer.parseInt(page)-1)*12+1);
+        int menshoescounts=menService.GetMenShoesCounts();
+        List<MenshoesDTO> menshoesDTOs=menService.GetMenShoesByPage((Integer.parseInt(page)-1)*12);
         model.addAttribute("menshoesDTOs",menshoesDTOs);
+        model.addAttribute("menshoescounts",menshoescounts);
         return model;
 
     }

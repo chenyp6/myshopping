@@ -24,6 +24,8 @@ public interface WomenshoesMapper {
 
     List<Womenshoes> selectToAdminByPage(int page);
 
+    List<Womenshoes> FuzzySerchByIndex(String index);
+
     Womenshoes selectByPrimaryKey(String shoesid);
 
     int GetWomenShoesCounts();

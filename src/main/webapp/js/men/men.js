@@ -45,7 +45,7 @@ $(function (){
         url:'/myshopping/querymenshoes',
         dataType:'json',
         data:{
-            page:'1',
+            page:'1'
         },
         success:function (data) {
             $("#pagenow").val('1');

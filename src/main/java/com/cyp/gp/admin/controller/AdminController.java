@@ -98,4 +98,30 @@ public class AdminController {
         return model;
     }
 
+    @RequestMapping("/fuzzyserchmenshoes")
+    @ResponseBody
+    public ModelMap fuzzyserchmenshoes(String index){
+        ModelMap model=new ModelMap();
+        List<MenshoesDTO> menshoesDTOs = adminService.FuzzySerchMenshoesByIndex(index);
+        model.addAttribute("menshoesDTOs",menshoesDTOs);
+        return model;
+    }
+
+    @RequestMapping("/fuzzyserchwomenshoes")
+    @ResponseBody
+    public ModelMap fuzzyserchwomenshoes(String index){
+        ModelMap model=new ModelMap();
+        List<WomenshoesDTO> womenshoesDTOs =adminService.FuzzySerchWomenshoesByIndex(index);
+        model.addAttribute("womenshoesDTOs",womenshoesDTOs);
+        return model;
+    }
+
+    @RequestMapping("/fuzzyserchchildrenshoes")
+    @ResponseBody
+    public ModelMap fuzzyserchchildremshoes(String index){
+        ModelMap model=new ModelMap();
+        List<ChildrenshoesDTO> childrenshoesDTOs = adminService.FuzzySerchChildrenshoesByIndex(index);
+        model.addAttribute("childrenshoesDTOs",childrenshoesDTOs);
+        return model;
+    }
 }

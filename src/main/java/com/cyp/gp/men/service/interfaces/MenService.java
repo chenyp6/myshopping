@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface MenService {
     List<MenshoesDTO> GetMenShoesByPage(int page);
-
+    int GetMenShoesCounts();
 }

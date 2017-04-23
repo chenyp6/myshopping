@@ -1,7 +1,7 @@
 $(function () {
     $("#childrenshoes").on('click',function () {
         $.ajax({
-            url: 'querychildrenshoestoadmin',
+            url: '/myshopping/querychildrenshoestoadmin',
             dataType: 'json',
             data: {
                 page: '1',
@@ -43,8 +43,8 @@ $(function () {
                 }
                 $("#PageNum").append('<li><a class="childrenpagenum" href="#">Next</a></li>')
                 $("#MainForm").append('<p class="msg">共找到' + data.childrenshoescounts + '条记录</p>')
-                $("#serchbtn").append('<input id="serchwomenshoes" type="button" value="查询" >');
-                $("#serchtext").append('<input name="womenshoesid"  class="sttl" style="border: hidden" placeholder="查询编号" id="getshoesid" type="text" />');
+                $("#serchbtn").append('<input id="childrenfuzzyserch" type="button" value="查询" >');
+                $("#serchtext").append('<input   class="sttl" style="border: hidden" placeholder="查询编号" id="getindex" type="text" />');
             }
         })
     })
@@ -94,4 +94,33 @@ $(function () {
             }
         });
     })
+
+    $("#serchbtn").on('click','#childrenfuzzyserch',function () {
+        $.ajax({
+            url: '/myshopping/fuzzyserchchildrenshoes',
+            dataType: 'json',
+            data:{
+                index : $("#getindex").val()
+            },
+            success:function (data) {
+                $(".itemmes").remove();
+                $("#pagenow").val('1');
+                $("#PageNum").html("");
+                $(".msg").remove("");
+                for (var i = 0; i < data.childrenshoesDTOs.length; i++) {
+                    var tbody = '<tr class="itemmes">' +
+                        '<td>' + data.childrenshoesDTOs[i].shoesid + '</td>' +
+                        '<td><img src="/images/' + data.childrenshoesDTOs[i].shoesid + '.jpg" style="width: 135px;"></td>' +
+                        '<td>' + data.childrenshoesDTOs[i].shoesname + '</td>' +
+                        '<td>' + data.childrenshoesDTOs[i].price + '</td>' +
+                        '<td>' + data.childrenshoesDTOs[i].introduction + '</td>' +
+                        '<td>' + data.childrenshoesDTOs[i].shoeslevel + '</td>' +
+                        '<td><a href="#">修改</a> | <a href="#">删除</a></td>' +
+                        '</tr>';
+                    $('table').append(tbody);
+                }
+            }
+        })
+    })
+
 })

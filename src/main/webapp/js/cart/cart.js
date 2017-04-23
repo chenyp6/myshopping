@@ -6,7 +6,7 @@ $(function (){
             var total=0;
             for(var i=0;i<data.cartDTOs.length;i++) {
                 var w = '<div class="cart-header">' +
-                    '<div class="close"><span  class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>' +
+                    '<div class="close"><input type="hidden" value="'+data.cartDTOs[i].shoesid+'"><span  class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>' +
                     '<div class="cart-sec simpleCart_shelfItem">' +
                     '<div class="cart-item cyc">' +
                     '<img src="' + data.cartDTOs[i].imagepath + '" class="img-responsive" alt=""/>' +
@@ -44,5 +44,15 @@ $(function (){
                 $("#total").text(parseInt($("#total").text())-t);
                 $("#last_price").text(parseInt($("#last_price").text())-t);
             });
+            $.ajax({
+                url:'/myshopping/deleteshoes',
+                dataType:'json',
+                data:{
+                    shoesid:$(this).children('input').val()
+                },
+                success:function (data) {
+
+                }
+            })
         });
 })

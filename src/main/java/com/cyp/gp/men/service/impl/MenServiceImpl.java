@@ -20,4 +20,8 @@ public class MenServiceImpl implements MenService{
         List<MenshoesDTO> menshoesDTOs=menshoesMapper.selectByPage(page);
         return menshoesDTOs;
     }
+
+    public int GetMenShoesCounts(){
+        return menshoesMapper.GetMenShoesCounts();
+    }
 }

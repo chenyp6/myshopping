@@ -47,7 +47,7 @@
     <!-- //FlexSlider-->
 </head>
 <body>
-<div class="header">
+<%--<div class="header">
     <div class="container">
         <div class="header-top">
             <div class="logo">
@@ -168,7 +168,8 @@
         </div>
         <!--header-bottom-->
     </div>
-</div>
+</div>--%>
+<%@include file="/WEB-INF/jsp/top/top.jsp"%>
 <div class="head-bread">
     <div class="container">
         <ol class="breadcrumb">

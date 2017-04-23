@@ -29,7 +29,7 @@ public class WomenController {
     public ModelMap querywomenshoes(String page){
         ModelMap model=new ModelMap();
         /*int i=0;*/
-        List<WomenshoesDTO> womenshoesDTOs=womenService.GetWomenShoesByPage((Integer.parseInt(page)-1)*12+1);
+        List<WomenshoesDTO> womenshoesDTOs=womenService.GetWomenShoesByPage((Integer.parseInt(page)-1)*12);
        /* for (WomenshoesDTO t:womenshoes){
             model.addAttribute("womenshoes"+i,t);
             i++;

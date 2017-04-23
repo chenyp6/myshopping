@@ -217,4 +217,8 @@
   <select id="GetChildrenShoesCounts"  resultType="int">
     select count(*) from childrenshoes
   </select>
+  <select id="FuzzySerchByIndex"  parameterType="java.lang.String" resultType="com.cyp.gp.children.dao.Childrenshoes">
+    select * from childrenshoes WHERE shoesid LIKE concat(concat('%',#{index}),'%')
+  </select>
+
 </mapper>

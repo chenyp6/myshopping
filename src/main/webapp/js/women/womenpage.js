@@ -22,6 +22,14 @@ $(function () {
             },
             success:function (data) {
                 $("#pagenow").val(pagenow);
+                $(".simpleCart_shelfItem").css("display","block");
+                if(data.womenshoesDTOs.length<12){
+                    $(".quick-view").each(function (index) {
+                        if(index>=data.womenshoesDTOs.length){
+                            $(this).closest(".simpleCart_shelfItem").css("display","none");
+                        }
+                    })
+                }
                 $(".img").each(function(index){
                     $(this).children("img").attr("src","/images/"+data.womenshoesDTOs[index].shoesid.toString()+".jpg");
                 });

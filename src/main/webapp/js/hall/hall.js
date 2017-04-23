@@ -26,12 +26,12 @@ $(function () {
 
             }
         })
-    if($("#userexits").val()!="1"){
+    /*if($("#userexits").val()!="1"){
             $("#welcome").css("display","none");
     }
         if($("#userexits").val()=="1"){
             $("#signup").css("display","none");
             $("#login").text("Logout");
             $("#login").attr("href","/myshopping/logout");
-        }
+        }*/
 })

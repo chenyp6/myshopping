@@ -1,5 +1,6 @@
 package com.cyp.gp.cart.service.interfaces;
 
+import com.cyp.gp.cart.dao.CartKey;
 import com.cyp.gp.cart.dto.CartDTO;
 
 import java.util.List;
@@ -9,5 +10,5 @@ import java.util.List;
  */
 public interface CartService {
     List<CartDTO> GetCart(String userid);
-
+    int DeleteShoes(CartKey cartKey);
 }

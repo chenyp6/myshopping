@@ -28,8 +28,8 @@
     <!--script-->
 </head>
 <body>
-<input id="userexits" type="hidden" value="${userexits}"/>
-<div class="header">
+<%@include file="/WEB-INF/jsp/top/top.jsp"%>
+<%--<div class="header">
     <div class="container">
         <div class="header-top">
             <div class="logo">
@@ -152,7 +152,7 @@
         </div>
         <!--header-bottom-->
     </div>
-</div>
+</div>--%>
 <div class="header-end">
     <div class="container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">

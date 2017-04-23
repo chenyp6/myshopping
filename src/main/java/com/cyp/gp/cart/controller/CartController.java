@@ -1,5 +1,6 @@
 package com.cyp.gp.cart.controller;
 
+import com.cyp.gp.cart.dao.CartKey;
 import com.cyp.gp.cart.dto.CartDTO;
 import com.cyp.gp.cart.service.interfaces.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,4 +34,21 @@ public class CartController {
         model.addAttribute("cartDTOs",cartDTOs);
         return model;
     }
+
+    @RequestMapping("/deleteshoes")
+    @ResponseBody
+    public ModelMap deleteshoes(String shoesid,HttpServletRequest request){
+        ModelMap model=new ModelMap();
+        String userid=(String) request.getSession().getAttribute("userid");
+        CartKey cartKey= new CartKey();
+        cartKey.setShoesid(shoesid);
+        cartKey.setUserid(userid);
+        if(cartService.DeleteShoes(cartKey)==1){
+            model.addAttribute("msg","1");
+        }else{
+            model.addAttribute("msg","0");
+        }
+        return model;
+    }
+
 }

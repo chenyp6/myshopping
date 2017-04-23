@@ -148,4 +148,49 @@ public class AdminServiceImpl implements AdminService{
         return i;
     }
 
+    public List<MenshoesDTO> FuzzySerchMenshoesByIndex(String index){
+        List<MenshoesDTO> menshoesDTOs = new LinkedList<MenshoesDTO>();
+        List<Menshoes> menshoes =menshoesMapper.FuzzySerchByIndex(index);
+        for(Menshoes t : menshoes){
+            MenshoesDTO menshoesDTO = new MenshoesDTO();
+            menshoesDTO.setShoesname(t.getShoesname());
+            menshoesDTO.setShoesid(t.getShoesid());
+            menshoesDTO.setShoeslevel(t.getShoeslevel());
+            menshoesDTO.setIntroduction(t.getIntroduction());
+            menshoesDTO.setPrice(t.getPrice());
+            menshoesDTOs.add(menshoesDTO);
+        }
+        return menshoesDTOs;
+    }
+
+    public List<WomenshoesDTO> FuzzySerchWomenshoesByIndex(String index){
+        List<WomenshoesDTO> womenshoesDTOs = new LinkedList<WomenshoesDTO>();
+        List<Womenshoes> womenshoes=womenshoesMapper.FuzzySerchByIndex(index);
+        for (Womenshoes t : womenshoes){
+            WomenshoesDTO womenshoesDTO=new WomenshoesDTO();
+            womenshoesDTO.setShoesid(t.getShoesid());
+            womenshoesDTO.setShoesname(t.getShoesname());
+            womenshoesDTO.setPrice(t.getPrice());
+            womenshoesDTO.setShoeslevel(t.getShoeslevel());
+            womenshoesDTO.setIntroduction(t.getIntroduction());
+            womenshoesDTOs.add(womenshoesDTO);
+        }
+        return  womenshoesDTOs;
+    }
+
+    public List<ChildrenshoesDTO> FuzzySerchChildrenshoesByIndex(String index){
+        List<ChildrenshoesDTO> childrenshoesDTOs = new LinkedList<ChildrenshoesDTO>();
+        List<Childrenshoes> childrenshoes = childrenshoesMapper.FuzzySerchByIndex(index);
+        for(Childrenshoes t : childrenshoes){
+            ChildrenshoesDTO childrenshoesDTO= new ChildrenshoesDTO();
+            childrenshoesDTO.setShoesid(t.getShoesid());
+            childrenshoesDTO.setShoesname(t.getShoesname());
+            childrenshoesDTO.setShoeslevel(t.getShoeslevel());
+            childrenshoesDTO.setIntroduction(t.getIntroduction());
+            childrenshoesDTO.setPrice(t.getPrice());
+            childrenshoesDTOs.add(childrenshoesDTO);
+        }
+        return childrenshoesDTOs;
+    }
+
 }

@@ -2,6 +2,7 @@ package com.cyp.gp.cart.service.impl;
 
 import com.cyp.gp.cart.dao.Cart;
 import com.cyp.gp.cart.dao.CartExample;
+import com.cyp.gp.cart.dao.CartKey;
 import com.cyp.gp.cart.dto.CartDTO;
 import com.cyp.gp.cart.mapper.CartMapper;
 import com.cyp.gp.cart.service.interfaces.CartService;
@@ -37,4 +38,10 @@ public class CartServiceImpl implements CartService {
         }
         return cartDTOs;
     }
+
+    public int DeleteShoes(CartKey cartKey){
+        int i=cartMapper.deleteByPrimaryKey(cartKey);
+        return i;
+    }
+
 }

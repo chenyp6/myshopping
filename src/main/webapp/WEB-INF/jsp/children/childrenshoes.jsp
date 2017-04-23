@@ -46,7 +46,7 @@
 </head>
 <body>
 <input type="hidden" id="pagenow" value=""/>
-<div class="header">
+<%--<div class="header">
     <div class="container">
         <div class="header-top">
             <div class="logo">
@@ -167,7 +167,8 @@
         </div>
         <!--header-bottom-->
     </div>
-</div>
+</div>--%>
+<%@include file="/WEB-INF/jsp/top/top.jsp"%>
 <div class="head-bread">
     <div class="container">
         <ol class="breadcrumb">
@@ -422,7 +423,6 @@
             <div class="clearfix"></div>
             <div>
                 <ul class="pagination" style="margin-left: 300px;">
-                    <li><a href="#">&laquo;</a></li>
                     <li><a href="#">Prev</a></li>
                     <li><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
@@ -430,7 +430,6 @@
                     <li><a href="#">4</a></li>
                     <li><a href="#">5</a></li>
                     <li><a href="#">Next</a></li>
-                    <li><a href="#">&raquo;</a></li>
                 </ul>
             </div>
         </div>

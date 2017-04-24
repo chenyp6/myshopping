@@ -124,4 +124,41 @@ public class AdminController {
         model.addAttribute("childrenshoesDTOs",childrenshoesDTOs);
         return model;
     }
+
+    @RequestMapping("/changemenshoesmsg")
+    @ResponseBody
+    public ModelMap changemenshoesmsg(MenshoesDTO menshoesDTO){
+        ModelMap model=new ModelMap();
+        if(adminService.UpdateMenshoes(menshoesDTO)==1){
+            model.addAttribute("msg","1");
+        }else{
+            model.addAttribute("msg","0");
+        }
+        return model;
+    }
+
+    @RequestMapping("/changechildrenshoesmsg")
+    @ResponseBody
+    public ModelMap changechildrenshoesmsg(ChildrenshoesDTO childrenshoesDTO){
+        ModelMap model=new ModelMap();
+        if(adminService.UpdateChildrenshoes(childrenshoesDTO)==1){
+            model.addAttribute("msg","1");
+        }else{
+            model.addAttribute("msg","0");
+        }
+        return model;
+    }
+
+    @RequestMapping("/changewomenshoesmsg")
+    @ResponseBody
+    public ModelMap changewomenshoesmsg(WomenshoesDTO womenshoesDTO){
+        ModelMap model=new ModelMap();
+        if(adminService.UpdateWomenshoes(womenshoesDTO)==1){
+            model.addAttribute("msg","1");
+        }else{
+            model.addAttribute("msg","0");
+        }
+        return model;
+    }
+
 }

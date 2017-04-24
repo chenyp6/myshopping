@@ -25,13 +25,13 @@ $(function () {
                 $('table').append(thead);
                 for (var i = 0; i < data.womenshoesDTOs.length; i++) {
                     var tbody = '<tr class="itemmes">' +
-                        '<td>' + data.womenshoesDTOs[i].shoesid + '</td>' +
+                        '<td class="womenshoesid">' + data.womenshoesDTOs[i].shoesid + '</td>' +
                         '<td><img src="/images/' + data.womenshoesDTOs[i].shoesid + '.jpg" style="width: 135px;"></td>' +
-                        '<td>' + data.womenshoesDTOs[i].shoesname + '</td>' +
-                        '<td>' + data.womenshoesDTOs[i].price + '</td>' +
-                        '<td>' + data.womenshoesDTOs[i].introduction + '</td>' +
-                        '<td>' + data.womenshoesDTOs[i].shoeslevel + '</td>' +
-                        '<td><a href="#">修改</a> | <a href="#">删除</a></td>' +
+                        '<td class="womenshoesname">' + data.womenshoesDTOs[i].shoesname + '</td>' +
+                        '<td class="womenshoesprice">' + data.womenshoesDTOs[i].price + '</td>' +
+                        '<td class="womenshoesintroduction">' + data.womenshoesDTOs[i].introduction + '</td>' +
+                        '<td class="womenshoeslevel">' + data.womenshoesDTOs[i].shoeslevel + '</td>' +
+                        '<td><a href="#" class="changewomenshoesmsg">修改</a> | <a href="#">删除</a></td>' +
                         '</tr>';
                     $('table').append(tbody);
                 }
@@ -80,13 +80,13 @@ $(function () {
                 $("#pagenow").val(pagenow);
                 for (var i = 0; i < data.womenshoesDTOs.length; i++) {
                     var tbody = '<tr class="itemmes">' +
-                        '<td>' + data.womenshoesDTOs[i].shoesid + '</td>' +
+                        '<td class="womenshoesid">' + data.womenshoesDTOs[i].shoesid + '</td>' +
                         '<td><img src="/images/' + data.womenshoesDTOs[i].shoesid + '.jpg" style="width: 135px;"></td>' +
-                        '<td>' + data.womenshoesDTOs[i].shoesname + '</td>' +
-                        '<td>' + data.womenshoesDTOs[i].price + '</td>' +
-                        '<td>' + data.womenshoesDTOs[i].introduction + '</td>' +
-                        '<td>' + data.womenshoesDTOs[i].shoeslevel + '</td>' +
-                        '<td><a href="#">修改</a> | <a href="#">删除</a></td>' +
+                        '<td class="womenshoesname">' + data.womenshoesDTOs[i].shoesname + '</td>' +
+                        '<td class="womenshoesprice">' + data.womenshoesDTOs[i].price + '</td>' +
+                        '<td class="womenshoesintroduction">' + data.womenshoesDTOs[i].introduction + '</td>' +
+                        '<td class="womenshoeslevel">' + data.womenshoesDTOs[i].shoeslevel + '</td>' +
+                        '<td><a href="#" class="changewomenshoesmsg">修改</a> | <a href="#">删除</a></td>' +
                         '</tr>';
                     $('table').append(tbody);
                 }
@@ -109,18 +109,58 @@ $(function () {
                 $(".msg").remove("");
                 for (var i = 0; i < data.womenshoesDTOs.length; i++) {
                     var tbody = '<tr class="itemmes">' +
-                        '<td>' + data.womenshoesDTOs[i].shoesid + '</td>' +
+                        '<td class="womenshoesid">' + data.womenshoesDTOs[i].shoesid + '</td>' +
                         '<td><img src="/images/' + data.womenshoesDTOs[i].shoesid + '.jpg" style="width: 135px;"></td>' +
-                        '<td>' + data.womenshoesDTOs[i].shoesname + '</td>' +
-                        '<td>' + data.womenshoesDTOs[i].price + '</td>' +
-                        '<td>' + data.womenshoesDTOs[i].introduction + '</td>' +
-                        '<td>' + data.womenshoesDTOs[i].shoeslevel + '</td>' +
-                        '<td><a href="#">修改</a> | <a href="#">删除</a></td>' +
+                        '<td class="womenshoesname">' + data.womenshoesDTOs[i].shoesname + '</td>' +
+                        '<td class="womenshoesprice">' + data.womenshoesDTOs[i].price + '</td>' +
+                        '<td class="womenshoesintroduction">' + data.womenshoesDTOs[i].introduction + '</td>' +
+                        '<td class="womenshoeslevel">' + data.womenshoesDTOs[i].shoeslevel + '</td>' +
+                        '<td><a href="#" class="changewomenshoesmsg">修改</a> | <a href="#">删除</a></td>' +
                         '</tr>';
                     $('table').append(tbody);
                 }
             }
         })
     })
+
+    $(document).on("click",".changewomenshoesmsg",function () {
+        $(this).closest(".itemmes").children(".womenshoesname").html('<input  class="sttl" style="border: hidden;height: 25px;width: 105px; "  value="'+$(this).closest(".itemmes").children(".womenshoesname").text()+'"  type="text" />');
+        $(this).closest(".itemmes").children(".womenshoesprice").html('<input  class="sttl" style="border: hidden;height: 25px;width: 55px; "  value="'+$(this).closest(".itemmes").children(".womenshoesprice").text()+'"  type="text" />');
+        $(this).closest(".itemmes").children(".womenshoesintroduction").html('<input  class="sttl" style="border: hidden;height: 25px; "  value="'+$(this).closest(".itemmes").children(".womenshoesintroduction").text()+'"  type="text" />');
+        $(this).closest(".itemmes").children(".womenshoeslevel").html('<input  class="sttl" style="border: hidden;height: 25px; width: 55px;"  value="'+$(this).closest(".itemmes").children(".womenshoeslevel").text()+'"  type="text" />');
+        $(this).removeClass("changewomenshoesmsg");
+        $(this).addClass("confirmwomenshoesmsg");
+        $(this).text("确认");
+    })
+
+    $(document).on("click",".confirmwomenshoesmsg",function () {
+        var mythis = $(this);
+        $.ajax({
+            url:'/myshopping/changewomenshoesmsg',
+            dataType:'json',
+            data:{
+                'shoesid':$(this).closest(".itemmes").children(".womenshoesid").text(),
+                'shoesname':$(this).closest(".itemmes").children(".womenshoesname").children('input').val(),
+                'price':$(this).closest(".itemmes").children(".womenshoesprice").children('input').val(),
+                'introduction':$(this).closest(".itemmes").children(".womenshoesintroduction").children('input').val(),
+                'shoeslevel':$(this).closest(".itemmes").children(".womenshoeslevel").children('input').val()
+            },
+            success:function (data) {
+                if(data.msg=="1") {
+                    alert("修改成功！")
+                    mythis.removeClass("confirmwomenshoesmsg");
+                    mythis.addClass("changewomenshoesmsg");
+                    mythis.text("修改");
+                    mythis.closest(".itemmes").children(".womenshoesname").html(mythis.closest(".itemmes").children(".womenshoesname").children('input').val());
+                    mythis.closest(".itemmes").children(".womenshoesprice").html(mythis.closest(".itemmes").children(".womenshoesprice").children('input').val());
+                    mythis.closest(".itemmes").children(".womenshoesintroduction").html(mythis.closest(".itemmes").children(".womenshoesintroduction").children('input').val());
+                    mythis.closest(".itemmes").children(".womenshoeslevel").html(mythis.closest(".itemmes").children(".womenshoeslevel").children('input').val());
+                }else{
+                    alert("修改失败！")
+                }
+            }
+        })
+    })
+
 
 })

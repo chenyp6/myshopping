@@ -35,4 +35,10 @@ public interface AdminService {
 
     List<ChildrenshoesDTO> FuzzySerchChildrenshoesByIndex(String index);
 
+    int UpdateMenshoes(MenshoesDTO menshoesDTO);
+
+    int UpdateChildrenshoes(ChildrenshoesDTO childrenshoesDTO);
+
+    int UpdateWomenshoes(WomenshoesDTO womenshoesDTO);
+
 }

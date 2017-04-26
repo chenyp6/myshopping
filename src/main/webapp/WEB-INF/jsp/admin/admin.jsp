@@ -1,97 +1,48 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: admin
+  Date: 2017/4/26
+  Time: 10:42
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html lang="zh">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title></title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="generator" content="" />
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-    <link href="/css/haiersoft.css" rel="stylesheet" type="text/css" media="screen,print" />
-    <link href="/css/print.css" rel="stylesheet" type="text/css"  media="print" />
-    <link href="/css/adminstyle.css" rel="stylesheet" type="text/css"  media="print" />
-    <script src="/js/tool/jquery-2.1.4.min.js"></script>
-    <script src="/js/admin/side.js" type="text/javascript"></script>
-    <script src="/js/admin/admin.js"></script>
-    <script src="/js/admin/menshoes.js"></script>
-    <script src="/js/admin/womenshoes.js"></script>
-    <script src="/js/admin/childrenshoes.js"></script>
-    <script src="/js/admin/addnewshoes.js"></script>
-    <script src="/js/tool/jquery-form.js"></script>
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员登录</title>
+    <link rel="stylesheet" type="text/css" href="/css/adminloginstyles.css">
+    <script type="text/javascript" src="/js/tool/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/js/admin/adminlogin.js"></script>
+
 </head>
 <body>
-<input type="hidden" id="pagenow" value="1">
-<div class="wrap_left" id="frmTitle" name="fmTitle">
-    <div id="Logo"><span>人单合一</span></div>
-    <div class="menu_list">
-        <dl>
-            <dt><span>男子商品管理</span></dt>
-            <dd><a id="menshoes" href="javascript:void(0);" >男子鞋类</a>
-                <a href="" >二级分类</a>
-                <a href=""  >二级分类</a>
-                <a href="" >二级分类</a></dd>
 
-            <dt><span>女子商品管理</span></dt>
-            <dd><a id="womenshoes" href="javascript:void(0);">女子鞋类</a>
-                <a href="" title="二级分类">二级分类</a>
-                <a href="" title="二级分类">二级分类</a>
-                <a href="" title="二级分类">二级分类</a></dd>
 
-            <dt><span>儿童商品管理</span></dt>
-            <dd><a id="childrenshoes" href="javascript:void(0);">儿童鞋类</a>
-                <a href="" title="二级分类">二级分类</a>
-                <a href="" title="二级分类">二级分类</a>
-                <a href="" title="二级分类">二级分类</a></dd>
+<div class="wrapper">
 
-            <dt><span>新增商品</span></dt>
-            <dd><a id="addnewshoes" href="javascript:void(0);" title="二级分类">新增商品</a>
-                <a href="" title="二级分类">二级分类</a>
-                <a href="" title="二级分类">二级分类</a>
-                <a href="" title="二级分类">二级分类</a></dd>
-        </dl>
-    </div>
-</div>
-<div class="picBox" onclick="switchSysBar()" id="switchPoint"></div>
-<div class="wrap_right">
-    <header>
-        <div id="Header">
-            <div id="Head">
-                <h1 title="Myshopping系统管理后台"><img src="/images/common/pci.jpg" width="398" height="26" ></h1>
-                <script language="javascript">
-                    function showmenu(id){id.style.visibility = "visible";}
-                    function hidmenu(){UserList.style.visibility = "hidden";}
-                    document.onclick = hidmenu;
-                </script>
-                <div class="user"><a href="javascript:showmenu(UserList)">admin</a>
-                    <div id="UserList"><a href="">修改</a>
-                        <a href="">注销</a>
-                        <a href="">退出</a></div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div id="Contents">
-        <div id="TopMain">
-            <div id="serchtext" class="selectbox floatL mag_r20">
-            </div>
-            <div id="serchbtn" class="btn_box floatL "></div>
-        </div>
-        <div id="MainForm">
-            <div class="form_boxA">
-                <form role="form" id="newshoes" method="post" enctype="multipart/form-data">
-                <table cellpadding="0" cellspacing="0">
-                </table>
-                </form>
-            </div>
-        </div>
-        <ul id="PageNum">
-        </ul>
+    <div class="container">
+        <h1>Welcome</h1>
+        <form class="form" action="/myshopping/checkadmin" method="post">
+            <input type="text" name="userid" placeholder="用户名" value="${userid}">
+            <input type="password" name="pwd" placeholder="密码">
+            <button type="submit" id="login-button">登录</button>
+        </form>
     </div>
 
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 
 </div>
 </body>

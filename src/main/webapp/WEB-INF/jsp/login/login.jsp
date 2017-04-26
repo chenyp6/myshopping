@@ -87,13 +87,13 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="products.html">Shoes</a></li>
-                                    <li><a href="products.html">Tees</a></li>
-                                    <li><a href="products.html">Tops</a></li>
+                                    <li><a href="#">Shoes</a></li>
+                                    <li><a href="#">Tees</a></li>
+                                    <li><a href="#">Tops</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="products.html">Tracks</a></li>
+                                    <li><a href="#">Tracks</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="products.html">Gear</a></li>
+                                    <li><a href="#">Gear</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -102,13 +102,13 @@
                                     <div class="row">
                                         <div class="col-sm-4 menu-img-pad">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="products.html">Joggers</a></li>
-                                                <li><a href="products.html">Foot Ball</a></li>
-                                                <li><a href="products.html">Cricket</a></li>
+                                                <li><a href="/myshopping/menshoes">Joggers</a></li>
+                                                <li><a href="#">Foot Ball</a></li>
+                                                <li><a href="#">Cricket</a></li>
                                                 <li class="divider"></li>
-                                                <li><a href="products.html">Tennis</a></li>
+                                                <li><a href="#">Tennis</a></li>
                                                 <li class="divider"></li>
-                                                <li><a href="products.html">Casual</a></li>
+                                                <li><a href="#">Casual</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-4 menu-img-pad">
@@ -126,13 +126,13 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="products.html">Tops</a></li>
-                                                <li><a href="products.html">Bottoms</a></li>
-                                                <li><a href="products.html">Yoga Pants</a></li>
+                                                <li><a href="/myshopping/womenshoes">Tops</a></li>
+                                                <li><a href="#">Bottoms</a></li>
+                                                <li><a href="#">Yoga Pants</a></li>
                                                 <li class="divider"></li>
-                                                <li><a href="products.html">Sports</a></li>
+                                                <li><a href="#">Sports</a></li>
                                                 <li class="divider"></li>
-                                                <li><a href="products.html">Gym</a></li>
+                                                <li><a href="#">Gym</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-6">
@@ -144,16 +144,16 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">kids<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="products.html">Tees</a></li>
-                                    <li><a href="products.html">Shorts</a></li>
-                                    <li><a href="products.html">Gear</a></li>
+                                    <li><a href="/myshopping/childreshoes">Tees</a></li>
+                                    <li><a href="#">Shorts</a></li>
+                                    <li><a href="#">Gear</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="products.html">Watches</a></li>
+                                    <li><a href="#">Watches</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="products.html">Shoes</a></li>
+                                    <li><a href="#">Shoes</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">Catch</a></li>
+                            <li><a href="#">Catch</a></li>
                             <div class="clearfix"></div>
                         </ul>
                         <div class="clearfix"></div>
@@ -209,53 +209,6 @@
 </div>
 <!-- //login-page -->
 <!--signup-->
-<div class="footer-grid">
-    <div class="container">
-        <div class="col-md-2 re-ft-grd">
-            <h3>Categories</h3>
-            <ul class="categories">
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">Kids</a></li>
-                <li><a href="#">Formal</a></li>
-                <li><a href="#">Casuals</a></li>
-                <li><a href="#">Sports</a></li>
-            </ul>
-        </div>
-        <div class="col-md-2 re-ft-grd">
-            <h3>Short links</h3>
-            <ul class="shot-links">
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Delivery</a></li>
-                <li><a href="#">Return Policy</a></li>
-                <li><a href="#">Terms & conditions</a></li>
-                <li><a href="contact.html">Sitemap</a></li>
-            </ul>
-        </div>
-        <div class="col-md-6 re-ft-grd">
-            <h3>Social</h3>
-            <ul class="social">
-                <li><a href="#" class="fb">facebook</a></li>
-                <li><a href="#" class="twt">twitter</a></li>
-                <li><a href="#" class="gpls">g+ plus</a></li>
-                <div class="clearfix"></div>
-            </ul>
-        </div>
-        <div class="col-md-2 re-ft-grd">
-            <div class="bt-logo">
-                <div class="logo">
-                    <a href="/myshopping" class="ft-log">N-AIR</a>
-                </div>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="copy-rt">
-        <div class="container">
-            <p>Copyright &copy; 2015.Company name All rights reserved. <a target="_blank" href="http://www.mycodes.net/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
-        </div>
-    </div>
-</div>
+<%@include file="/WEB-INF/jsp/tool/foot/foot.jsp"%>
 </body>
 </html>

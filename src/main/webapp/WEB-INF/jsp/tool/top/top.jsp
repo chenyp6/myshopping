@@ -12,7 +12,7 @@
     <div class="container">
         <div class="header-top">
             <div class="logo">
-                <a href="index.html">N-AIR</a>
+                <a href="/myshopping">N-AIR</a>
             </div>
             <div class="login-bars">
                 <span class="login-bar" id="welcome"  >Hi ${sessionScope.userid}!&nbsp&nbsp</span>

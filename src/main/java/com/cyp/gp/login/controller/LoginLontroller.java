@@ -31,9 +31,6 @@ public class LoginLontroller {
     @RequestMapping("/checkuser")
     public String checkuser(UsersDTO usersDTO,ModelMap model,HttpServletRequest request)throws Exception{
         if(loginService.CheckUser(usersDTO)==0){
-           /* modelAndView.addObject("userid",usersDTO.getUserid());
-            modelAndView.addObject("mes","wrong password!");
-            modelAndView.setViewName("login/login");*/
            model.addAttribute("usersDTO",usersDTO);
             return "login/login";
         }
@@ -41,7 +38,6 @@ public class LoginLontroller {
             request.getSession().setAttribute("userid",usersDTO.getUserid());
             model.addAttribute("userexits","1");
             model.addAttribute("userid",usersDTO.getUserid());
-           // modelAndView.setViewName("hall/hall");
             return "hall/hall";
         }
     }

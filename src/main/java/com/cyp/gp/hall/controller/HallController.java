@@ -49,7 +49,7 @@ public class HallController {
 
     @RequestMapping("logout")
     public String logout(HttpServletRequest request){
-        request.getSession().removeAttribute("userid");
+        request.getSession().invalidate();
         return "login/login";
     }
 

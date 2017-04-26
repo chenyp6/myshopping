@@ -1,9 +1,8 @@
 package com.cyp.gp.admin.service.impl;
 
-import com.cyp.gp.admin.dto.ChildrenshoesDTO;
-import com.cyp.gp.admin.dto.MenshoesDTO;
-import com.cyp.gp.admin.dto.ShoesDTO;
-import com.cyp.gp.admin.dto.WomenshoesDTO;
+import com.cyp.gp.admin.dao.Admin;
+import com.cyp.gp.admin.dto.*;
+import com.cyp.gp.admin.mapper.AdminMapper;
 import com.cyp.gp.admin.service.interfaces.AdminService;
 import com.cyp.gp.children.dao.Childrenshoes;
 import com.cyp.gp.children.mapper.ChildrenshoesMapper;
@@ -32,7 +31,23 @@ public class AdminServiceImpl implements AdminService{
     ChildrenshoesMapper childrenshoesMapper;
     @Autowired
     ImageMapper imageMapper;
+    @Autowired
+    AdminMapper adminMapper;
 
+
+
+    public int CheckAdmin(AdminDTO adminDTO){
+        int i=0;
+        Admin admin = new Admin();
+        admin.setUserid(adminDTO.getUserid());
+        admin.setPwd(adminDTO.getPwd());
+        if(adminMapper.selectByPrimaryKey(admin.getUserid())!=null){
+            if(adminMapper.selectByPrimaryKey(admin.getUserid()).getPwd().equals(adminDTO.getPwd())){
+                i=1;
+            }
+        }
+        return i;
+    }
 
     public  List<MenshoesDTO> GetMenShoesToAdminByPage(int page){
         List<MenshoesDTO> menshoesDTOs = new LinkedList<MenshoesDTO>();

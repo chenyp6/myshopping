@@ -168,7 +168,7 @@
         <!--header-bottom-->
     </div>
 </div>--%>
-<%@include file="/WEB-INF/jsp/top/top.jsp"%>
+<%@include file="/WEB-INF/jsp/tool/top/top.jsp"%>
 
 <div class="head-bread">
     <div class="container">
@@ -434,167 +434,10 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-3 grid-details">
-            <div class="grid-addon">
-                <section  class="sky-form">
-                    <div class="product_right">
-                        <h4 class="m_2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Categories</h4>
-                        <div class="tab1">
-                            <ul class="place">
-                                <li class="sort">Shoes</li>
-                                <li class="by"><img src="/images/do.png" alt=""></li>
-                                <div class="clearfix"> </div>
-                            </ul>
-                            <div class="single-bottom">
-                                <a href="#"><p>Running</p></a>
-                                <a href="#"><p>Foot ball</p></a>
-                                <a href="#"><p>Daily</p></a>
-                                <a href="#"><p>Sneakers</p></a>
-                            </div>
-                        </div>
-                        <div class="tab2">
-                            <ul class="place">
-                                <li class="sort">Clothing</li>
-                                <li class="by"><img src="/images/do.png" alt=""></li>
-                                <div class="clearfix"> </div>
-                            </ul>
-                            <div class="single-bottom">
-                                <a href="#"><p>Tracks</p></a>
-                                <a href="#"><p>Tees</p></a>
-                                <a href="#"><p>Hair bands</p></a>
-                                <a href="#"><p>Wrist bands</p></a>
-                            </div>
-                        </div>
-                        <div class="tab3">
-                            <ul class="place">
-                                <li class="sort">Gear</li>
-                                <li class="by"><img src="/images/do.png" alt=""></li>
-                                <div class="clearfix"> </div>
-                            </ul>
-                            <div class="single-bottom">
-                                <a href="#"><p>Running app</p></a>
-                                <a href="#"><p>Training club</p></a>
-                                <a href="#"><p>Nike Fuel+Band se</p></a>
-                            </div>
-                        </div>
-                </section>
-                <section  class="sky-form">
-                    <h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>DISCOUNTS</h4>
-                    <div class="row row1 scroll-pane">
-                        <div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Upto - 10% (20)</label>
-                        </div>
-                        <div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>40% - 50% (5)</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>30% - 20% (7)</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>10% - 5% (2)</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other(50)</label>
-                        </div>
-                    </div>
-                </section>
-                <!---->
-                <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-                <script type='text/javascript'>//<![CDATA[
-                $(window).load(function(){
-                    $( "#slider-range" ).slider({
-                        range: true,
-                        min: 0,
-                        max: 400000,
-                        values: [ 2500, 350000 ],
-                        slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-                        }
-                    });
-                    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-
-                });//]]>
-
-                </script>
-                <section  class="sky-form">
-                    <h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Type</h4>
-                    <div class="row row1 scroll-pane">
-                        <div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Air Max (30)</label>
-                        </div>
-                        <div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Armagadon   (30)</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Helium (30)</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Kyron     (30)</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Napolean  (30)</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Foot Rock   (30)</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Radiated  (30)</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Spiked  (30)</label>
-                        </div>
-                    </div>
-                </section>
-                <section  class="sky-form">
-                    <h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Brand</h4>
-                    <div class="row row1 scroll-pane">
-                        <div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Roadstar</label>
-                        </div>
-                        <div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Tornado</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Kissan</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Oakley</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Manga</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>Wega</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Kings</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Zumba</label>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
+        <%@include file="/WEB-INF/jsp/tool/griddetail/griddetail.jsp"%>
         <div class="clearfix"></div>
     </div>
 </div>
-<div class="footer-grid">
-    <div class="container">
-        <div class="col-md-2 re-ft-grd">
-            <h3>Categories</h3>
-            <ul class="categories">
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">Kids</a></li>
-                <li><a href="#">Formal</a></li>
-                <li><a href="#">Casuals</a></li>
-                <li><a href="#">Sports</a></li>
-            </ul>
-        </div>
-        <div class="col-md-2 re-ft-grd">
-            <h3>Short links</h3>
-            <ul class="shot-links">
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Delivery</a></li>
-                <li><a href="#">Return Policy</a></li>
-                <li><a href="#">Terms & conditions</a></li>
-                <li><a href="contact.html">Sitemap</a></li>
-            </ul>
-        </div>
-        <div class="col-md-6 re-ft-grd">
-            <h3>Social</h3>
-            <ul class="social">
-                <li><a href="#" class="fb">facebook</a></li>
-                <li><a href="#" class="twt">twitter</a></li>
-                <li><a href="#" class="gpls">g+ plus</a></li>
-                <div class="clearfix"></div>
-            </ul>
-        </div>
-        <div class="col-md-2 re-ft-grd">
-            <div class="bt-logo">
-                <div class="logo">
-                    <a href="index.html" class="ft-log">N-AIR</a>
-                </div>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="copy-rt">
-        <div class="container">
-            <p>Copyright &copy; 2015.Company name All rights reserved. <a target="_blank" href="http://www.mycodes.net/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
-        </div>
-    </div>
-</div>
+<%@include file="/WEB-INF/jsp/tool/foot/foot.jsp"%>
 </body>
 </html>

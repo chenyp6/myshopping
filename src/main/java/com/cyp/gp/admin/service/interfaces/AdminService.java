@@ -1,9 +1,6 @@
 package com.cyp.gp.admin.service.interfaces;
 
-import com.cyp.gp.admin.dto.ChildrenshoesDTO;
-import com.cyp.gp.admin.dto.MenshoesDTO;
-import com.cyp.gp.admin.dto.ShoesDTO;
-import com.cyp.gp.admin.dto.WomenshoesDTO;
+import com.cyp.gp.admin.dto.*;
 import com.cyp.gp.hall.dao.Image;
 
 import java.util.List;
@@ -12,6 +9,9 @@ import java.util.List;
  * Created by admin on 2017/4/17.
  */
 public interface AdminService {
+
+    int CheckAdmin(AdminDTO adminDTO);
+
     List<MenshoesDTO> GetMenShoesToAdminByPage(int page);
     int GetMenShoesCounts();
 

@@ -1,9 +1,6 @@
 package com.cyp.gp.admin.controller;
 
-import com.cyp.gp.admin.dto.ChildrenshoesDTO;
-import com.cyp.gp.admin.dto.MenshoesDTO;
-import com.cyp.gp.admin.dto.ShoesDTO;
-import com.cyp.gp.admin.dto.WomenshoesDTO;
+import com.cyp.gp.admin.dto.*;
 import com.cyp.gp.admin.service.interfaces.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,9 +21,25 @@ public class AdminController {
     @Autowired
     AdminService adminService;
 
+    /*@RequestMapping("/adminhall")
+    public String adminhall(){
+        return "admin/adminhall";
+    }*/
+
     @RequestMapping("/admin")
     public String admin(){
         return "admin/admin";
+    }
+
+    @RequestMapping("/checkadmin")
+    public String checkadmin(AdminDTO adminDTO,ModelMap model){
+        model.addAttribute("userid",adminDTO.getUserid());
+        if(adminService.CheckAdmin(adminDTO)==1){
+            return "admin/adminhall";
+        }
+        else{
+            return "admin/admin";
+        }
     }
 
     @RequestMapping("/querymenshoestoadmin")

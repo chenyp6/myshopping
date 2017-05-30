@@ -3,11 +3,13 @@ package com.cyp.gp.admin.service.impl;
 import com.cyp.gp.admin.dao.Admin;
 import com.cyp.gp.admin.dto.*;
 import com.cyp.gp.admin.mapper.AdminMapper;
-import com.cyp.gp.admin.service.interfaces.AdminService;
+;import com.cyp.gp.admin.service.interfaces.AdminService;
 import com.cyp.gp.children.dao.Childrenshoes;
 import com.cyp.gp.children.mapper.ChildrenshoesMapper;
 import com.cyp.gp.hall.dao.Image;
+import com.cyp.gp.hall.dao.Shoes;
 import com.cyp.gp.hall.mapper.ImageMapper;
+import com.cyp.gp.hall.mapper.ShoesMapper;
 import com.cyp.gp.men.dao.Menshoes;
 import com.cyp.gp.men.mapper.MenshoesMapper;
 import com.cyp.gp.women.dao.Womenshoes;
@@ -33,6 +35,8 @@ public class AdminServiceImpl implements AdminService{
     ImageMapper imageMapper;
     @Autowired
     AdminMapper adminMapper;
+    @Autowired
+    ShoesMapper shoesMapper;
 
 
 
@@ -106,12 +110,21 @@ public class AdminServiceImpl implements AdminService{
     public int AddNewShoesToMenshoes(ShoesDTO shoesDTO){
         int i=0;
         Menshoes menshoes=new Menshoes();
+        Shoes shoes = new Shoes();
+        shoes.setShoesid(shoesDTO.getShoesid());
+        shoes.setShoesname(shoesDTO.getShoesname());
+        shoes.setPrice(shoesDTO.getPrice());
+        shoes.setIntroduction(shoesDTO.getIntroduction());
+        shoes.setShoeslevel(shoesDTO.getShoeslevel());
         menshoes.setShoesid(shoesDTO.getShoesid());
         menshoes.setShoesname(shoesDTO.getShoesname());
         menshoes.setPrice(shoesDTO.getPrice());
         menshoes.setIntroduction(shoesDTO.getIntroduction());
         menshoes.setShoeslevel(shoesDTO.getShoeslevel());
+        menshoes.setSalenumber(0);
+        shoes.setShoesid(shoesDTO.getShoesid());
         if (menshoesMapper.insert(menshoes)==1){
+            shoesMapper.insert(shoes);
             i=1;
         }
 
@@ -126,6 +139,7 @@ public class AdminServiceImpl implements AdminService{
         womenshoes.setPrice(shoesDTO.getPrice());
         womenshoes.setIntroduction(shoesDTO.getIntroduction());
         womenshoes.setShoeslevel(shoesDTO.getShoeslevel());
+        womenshoes.setSalenumber(0);
         if(womenshoesMapper.insert(womenshoes)=='1'){
             i=1;
         }
@@ -141,6 +155,7 @@ public class AdminServiceImpl implements AdminService{
         childrenshoes.setPrice(shoesDTO.getPrice());
         childrenshoes.setIntroduction(shoesDTO.getIntroduction());
         childrenshoes.setShoeslevel(shoesDTO.getShoeslevel());
+        childrenshoes.setSalenumber(0);
         if(childrenshoesMapper.insert(childrenshoes)=='1'){
             i=1;
         }
@@ -173,6 +188,7 @@ public class AdminServiceImpl implements AdminService{
             menshoesDTO.setShoeslevel(t.getShoeslevel());
             menshoesDTO.setIntroduction(t.getIntroduction());
             menshoesDTO.setPrice(t.getPrice());
+            menshoesDTO.setSalenumber(t.getSalenumber());
             menshoesDTOs.add(menshoesDTO);
         }
         return menshoesDTOs;
@@ -188,6 +204,7 @@ public class AdminServiceImpl implements AdminService{
             womenshoesDTO.setPrice(t.getPrice());
             womenshoesDTO.setShoeslevel(t.getShoeslevel());
             womenshoesDTO.setIntroduction(t.getIntroduction());
+            womenshoesDTO.setSalenumber(t.getSalenumber());
             womenshoesDTOs.add(womenshoesDTO);
         }
         return  womenshoesDTOs;
@@ -203,6 +220,7 @@ public class AdminServiceImpl implements AdminService{
             childrenshoesDTO.setShoeslevel(t.getShoeslevel());
             childrenshoesDTO.setIntroduction(t.getIntroduction());
             childrenshoesDTO.setPrice(t.getPrice());
+            childrenshoesDTO.setSalenumber(t.getSalenumber());
             childrenshoesDTOs.add(childrenshoesDTO);
         }
         return childrenshoesDTOs;
@@ -215,6 +233,7 @@ public class AdminServiceImpl implements AdminService{
         menshoes.setIntroduction(menshoesDTO.getIntroduction());
         menshoes.setShoeslevel(menshoesDTO.getShoeslevel());
         menshoes.setPrice(menshoesDTO.getPrice());
+        menshoes.setSalenumber(menshoesMapper.selectByPrimaryKey(menshoesDTO.getShoesid()).getSalenumber());
         return menshoesMapper.updateByPrimaryKey(menshoes);
     }
 
@@ -225,6 +244,7 @@ public class AdminServiceImpl implements AdminService{
         childrenshoes.setPrice(childrenshoesDTO.getPrice());
         childrenshoes.setIntroduction(childrenshoesDTO.getIntroduction());
         childrenshoes.setShoeslevel(childrenshoesDTO.getShoeslevel());
+        childrenshoes.setSalenumber(childrenshoesMapper.selectByPrimaryKey(childrenshoesDTO.getShoesid()).getSalenumber());
         return childrenshoesMapper.updateByPrimaryKey(childrenshoes);
     }
 
@@ -235,6 +255,80 @@ public class AdminServiceImpl implements AdminService{
         womenshoes.setPrice(womenshoesDTO.getPrice());
         womenshoes.setIntroduction(womenshoesDTO.getIntroduction());
         womenshoes.setShoeslevel(womenshoesDTO.getShoeslevel());
+        womenshoes.setSalenumber(womenshoesMapper.selectByPrimaryKey(womenshoesDTO.getShoesid()).getSalenumber());
         return womenshoesMapper.updateByPrimaryKey(womenshoes);
+    }
+
+    public List<MenshoesDTO> GetMenShoesSaleToAdmin(int page){
+        List<MenshoesDTO> menshoesDTOs =new LinkedList<MenshoesDTO>();
+        List<Menshoes> menshoes =menshoesMapper.selectSaledToAdminByPage(page);
+        for(Menshoes t:menshoes){
+            MenshoesDTO menshoesDTO = new MenshoesDTO();
+            menshoesDTO.setShoesid(t.getShoesid());
+            menshoesDTO.setShoesname(t.getShoesname());
+            menshoesDTO.setSalenumber(t.getSalenumber());
+            menshoesDTO.setShoeslevel(t.getShoeslevel());
+            menshoesDTO.setIntroduction(t.getIntroduction());
+            menshoesDTO.setPrice(t.getPrice());
+            menshoesDTOs.add(menshoesDTO);
+        }
+        return menshoesDTOs;
+    }
+
+    public int GetMenShoesSaleCounts(){
+        return menshoesMapper.GetMenShoesCounts();
+    }
+
+    public  List<WomenshoesDTO> GetWomenShoesSaleToAdmin(int page){
+        List<WomenshoesDTO> womenshoesDTOs = new LinkedList<WomenshoesDTO>();
+        List<Womenshoes> womenshoes = womenshoesMapper.selectSaledToAdminByPage(page);
+        for(Womenshoes t: womenshoes){
+            WomenshoesDTO womenshoesDTO = new WomenshoesDTO();
+            womenshoesDTO.setShoesid(t.getShoesid());
+            womenshoesDTO.setShoesname(t.getShoesname());
+            womenshoesDTO.setSalenumber(t.getSalenumber());
+            womenshoesDTO.setShoeslevel(t.getShoeslevel());
+            womenshoesDTO.setIntroduction(t.getIntroduction());
+            womenshoesDTO.setPrice(t.getPrice());
+            womenshoesDTOs.add(womenshoesDTO);
+        }
+        return womenshoesDTOs;
+    }
+
+    public int GetWomenShoesSaleCounts(){
+        return womenshoesMapper.GetWomenShoesCounts();
+    }
+
+    public List<ChildrenshoesDTO> GetChildrenShoesSaleToAdmin(int page){
+        List<ChildrenshoesDTO> childrenshoesDTOs = new LinkedList<ChildrenshoesDTO>();
+        List<Childrenshoes> childrenshoes = childrenshoesMapper.selectSaledToAdminByPage(page);
+        for(Childrenshoes t: childrenshoes){
+            ChildrenshoesDTO childrenshoesDTO = new ChildrenshoesDTO();
+            childrenshoesDTO.setShoesid(t.getShoesid());
+            childrenshoesDTO.setShoesname(t.getShoesname());
+            childrenshoesDTO.setSalenumber(t.getSalenumber());
+            childrenshoesDTO.setShoeslevel(t.getShoeslevel());
+            childrenshoesDTO.setIntroduction(t.getIntroduction());
+            childrenshoesDTO.setPrice(t.getPrice());
+            childrenshoesDTOs.add(childrenshoesDTO);
+        }
+        return childrenshoesDTOs;
+    }
+
+    public int GetChildrenShoesSaleCounts(){
+       return childrenshoesMapper.GetChildrenShoesCounts();
+    }
+
+    public int DeleteMenshoesByid(String shoesid){
+        shoesMapper.deleteByPrimaryKey(shoesid);
+        return menshoesMapper.deleteByPrimaryKey(shoesid);
+    }
+
+    public int DeleteWomenenshoesByid(String shoesid){
+        return womenshoesMapper.deleteByPrimaryKey(shoesid);
+    }
+
+    public int DeleteChildrenshoesByid(String shoesid){
+        return childrenshoesMapper.deleteByPrimaryKey(shoesid);
     }
 }

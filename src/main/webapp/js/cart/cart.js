@@ -13,13 +13,13 @@ $(function (){
                     '</div>' +
                     '<div class="cart-item-info">' +
                     '<ul class="qty">' +
-                    '<li><p>Size : ' + data.cartDTOs[i].size + '</p></li>' +
-                    '<li><p>Qty : <span class="number">' + data.cartDTOs[i].number + '</span></p></li>' +
-                    '<li><p>Price each :<span class="price">' + data.cartDTOs[i].price + '</span></p></li>' +
+                    '<li><p>尺码 : ' + data.cartDTOs[i].size + '</p></li>' +
+                    '<li><p>数量 : <span class="number">' + data.cartDTOs[i].number + '</span></p></li>' +
+                    '<li><p>单价 :<span class="price">' + data.cartDTOs[i].price + '</span></p></li>' +
                     '</ul>' +
                     '<div class="delivery">' +
-                    '<p>Service Charges : Rs.190.00</p>' +
-                    '<span>Delivered in 2-3 bussiness days</span>' +
+                    '<p>服务费 : Rs.0.00</p>' +
+                    '<span>商品将于两到三个工作日送达</span>' +
                     '<div class="clearfix"></div>' +
                     '</div>' +
                     '</div>' +
@@ -55,4 +55,30 @@ $(function (){
                 }
             })
         });
+
+    $(document).on('click','#pay',function () {
+        var shoesarray=[];
+        $('.close').each(function(index){
+            var shoesid=$(this).children('input').val();
+            var salenumber=$(this).closest('.cart-header').find(".number").text();
+            var shoestemp={'shoesid':shoesid,'salenumber':salenumber};
+            shoesarray.push(shoestemp);
+        });
+        $.ajax({
+            url:'/myshopping/pay',
+            type:"POST",
+            dataType:'json',
+            contentType:"application/json",
+            chche:'false',
+            data:JSON.stringify(shoesarray),
+            success:function (data) {
+                alert("购买成功!");
+                $('.cart-header').remove();
+                $("#total").text(0);
+                $("#last_price").text(0);
+            }
+        })
+    })
+
+
 })

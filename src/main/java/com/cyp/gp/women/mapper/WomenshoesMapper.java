@@ -18,17 +18,19 @@ public interface WomenshoesMapper {
 
     int insertSelective(Womenshoes record);
 
+    List<Womenshoes> selectByExample(WomenshoesExample example);
+    
     List<WomenshoesDTO> selectByPage(int page);
 
-    List<Womenshoes> selectByExample(WomenshoesExample example);
-
+    List<Womenshoes> selectSaledToAdminByPage(int page);
+    
     List<Womenshoes> selectToAdminByPage(int page);
 
     List<Womenshoes> FuzzySerchByIndex(String index);
+    
+    int GetWomenShoesCounts();
 
     Womenshoes selectByPrimaryKey(String shoesid);
-
-    int GetWomenShoesCounts();
 
     int updateByExampleSelective(@Param("record") Womenshoes record, @Param("example") WomenshoesExample example);
 

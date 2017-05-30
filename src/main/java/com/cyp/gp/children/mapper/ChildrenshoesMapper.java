@@ -19,12 +19,14 @@ public interface ChildrenshoesMapper {
     int insertSelective(Childrenshoes record);
 
     List<Childrenshoes> selectByExample(ChildrenshoesExample example);
-
+    
     List<ChildrenShoesDTO> selectByPage(int page);
 
     List<Childrenshoes> selectToAdminByPage(int page);
 
     List<Childrenshoes> FuzzySerchByIndex(String index);
+
+    List<Childrenshoes> selectSaledToAdminByPage(int page);
 
     int GetChildrenShoesCounts();
 

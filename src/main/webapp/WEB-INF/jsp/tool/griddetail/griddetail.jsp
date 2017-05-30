@@ -18,54 +18,54 @@
                 <h4 class="m_2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Categories</h4>
                 <div class="tab1">
                     <ul class="place">
-                        <li class="sort">Shoes</li>
+                        <li class="sort">鞋类</li>
                         <li class="by"><img src="/images/do.png" alt=""></li>
                         <div class="clearfix"> </div>
                     </ul>
                     <div class="single-bottom">
-                        <a href="#"><p>Running</p></a>
-                        <a href="#"><p>Foot ball</p></a>
-                        <a href="#"><p>Daily</p></a>
-                        <a href="#"><p>Sneakers</p></a>
+                        <a href="#"><p>跑步鞋</p></a>
+                        <a href="#"><p>足球鞋</p></a>
+                        <a href="#"><p>训练鞋</p></a>
+                        <a href="#"><p>登山鞋</p></a>
                     </div>
                 </div>
                 <div class="tab2">
                     <ul class="place">
-                        <li class="sort">Clothing</li>
+                        <li class="sort">本机新品</li>
                         <li class="by"><img src="/images/do.png" alt=""></li>
                         <div class="clearfix"> </div>
                     </ul>
                     <div class="single-bottom">
-                        <a href="#"><p>Tracks</p></a>
-                        <a href="#"><p>Tees</p></a>
-                        <a href="#"><p>Hair bands</p></a>
-                        <a href="#"><p>Wrist bands</p></a>
+                        <a href="#"><p>运动衫</p></a>
+                        <a href="#"><p>运动袜</p></a>
+                        <a href="#"><p>外套</p></a>
+                        <a href="#"><p>运动背心</p></a>
                     </div>
                 </div>
                 <div class="tab3">
                     <ul class="place">
-                        <li class="sort">Gear</li>
+                        <li class="sort">运动装备</li>
                         <li class="by"><img src="/images/do.png" alt=""></li>
                         <div class="clearfix"> </div>
                     </ul>
                     <div class="single-bottom">
-                        <a href="#"><p>Running app</p></a>
-                        <a href="#"><p>Training club</p></a>
-                        <a href="#"><p>Nike Fuel+Band se</p></a>
+                        <a href="#"><p>手套</p></a>
+                        <a href="#"><p>瑜伽垫</p></a>
+                        <a href="#"><p>运动器材</p></a>
                     </div>
                 </div>
         </section>
         <section  class="sky-form">
-            <h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>DISCOUNTS</h4>
+            <h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>折扣</h4>
             <div class="row row1 scroll-pane">
                 <div class="col col-4">
-                    <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Upto - 10% (20)</label>
+                    <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>低至 - 10% (20)</label>
                 </div>
                 <div class="col col-4">
                     <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>40% - 50% (5)</label>
                     <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>30% - 20% (7)</label>
                     <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>10% - 5% (2)</label>
-                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other(50)</label>
+                    <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>其他(50)</label>
                 </div>
             </div>
         </section>
@@ -86,7 +86,7 @@
         });//]]>
 
         </script>
-        <section  class="sky-form">
+        <%--<section  class="sky-form">
             <h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Type</h4>
             <div class="row row1 scroll-pane">
                 <div class="col col-4">
@@ -119,7 +119,7 @@
                     <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Zumba</label>
                 </div>
             </div>
-        </section>
+        </section>--%>
     </div>
 </div>
 </body>

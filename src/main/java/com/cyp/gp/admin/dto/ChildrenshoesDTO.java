@@ -14,6 +14,16 @@ public class ChildrenshoesDTO {
 
     private Integer shoeslevel;
 
+    private Integer salenumber;
+
+    public Integer getSalenumber() {
+        return salenumber;
+    }
+
+    public void setSalenumber(Integer salenumber) {
+        this.salenumber = salenumber;
+    }
+
     public String getShoesid() {
         return shoesid;
     }

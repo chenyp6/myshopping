@@ -3,7 +3,7 @@
 <%@ page isELIgnored="false" %>
 <html lang="en">
 <head>
-    <title>Single</title>
+    <title>商品详情</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
@@ -42,135 +42,13 @@
 </head>
 <body>
 <input type="hidden" id="shoesid" value="${shoesid}">
-<%--<div class="header">
-    <div class="container">
-        <div class="header-top">
-            <div class="logo">
-                <a href="/myshopping">N-AIR</a>
-            </div>
-            <div class="login-bars">
-                <a class="btn btn-default log-bar" href="/myshopping/register" role="button">Sign up</a>
-                <a class="btn btn-default log-bar" href="/myshopping/login" role="button">Login</a>
-                <div class="cart box_1">
-                    <a href="/myshopping/cart">
-                        <h3>
-                            <div class="total">
-                                <span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div></h3>
-                    </a>
-                    <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <!---menu-----bar--->
-        <div class="header-botom">
-            <div class="content white">
-                <nav class="navbar navbar-default nav-menu" role="navigation">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <!--/.navbar-header-->
-
-                    <div class="collapse navbar-collapse collapse-pdng" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav nav-font">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop<b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="products.html">Shoes</a></li>
-                                    <li><a href="products.html">Tees</a></li>
-                                    <li><a href="products.html">Tops</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="products.html">Tracks</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="products.html">Gear</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men<b class="caret"></b></a>
-                                <ul class="dropdown-menu multi-column columns-3">
-                                    <div class="row">
-                                        <div class="col-sm-4 menu-img-pad">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="products.html">Joggers</a></li>
-                                                <li><a href="products.html">Foot Ball</a></li>
-                                                <li><a href="products.html">Cricket</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="products.html">Tennis</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="products.html">Casual</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-4 menu-img-pad">
-                                            <a href="#"><img src="/images/menu1.jpg" alt="/" class="img-rsponsive men-img-wid" /></a>
-                                        </div>
-                                        <div class="col-sm-4 menu-img-pad">
-                                            <a href="#"><img src="/images/menu2.jpg" alt="/" class="img-rsponsive men-img-wid" /></a>
-                                        </div>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Women<b class="caret"></b></a>
-                                <ul class="dropdown-menu multi-column columns-2">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="products.html">Tops</a></li>
-                                                <li><a href="products.html">Bottoms</a></li>
-                                                <li><a href="products.html">Yoga Pants</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="products.html">Sports</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="products.html">Gym</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <a href="#"><img src="/images/menu3.jpg" alt="/" class="img-rsponsive men-img-wid" /></a>
-                                        </div>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">kids<b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="products.html">Tees</a></li>
-                                    <li><a href="products.html">Shorts</a></li>
-                                    <li><a href="products.html">Gear</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="products.html">Watches</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="products.html">Shoes</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html">Catch</a></li>
-                            <div class="clearfix"></div>
-                        </ul>
-                        <div class="clearfix"></div>
-                    </div>
-                    <!--/.navbar-collapse-->
-                    <div class="clearfix"></div>
-                </nav>
-                <!--/.navbar-->
-                <div class="clearfix"></div>
-            </div>
-            <!--/.content--->
-        </div>
-        <!--header-bottom-->
-    </div>
-</div>--%>
 <%@include file="/WEB-INF/jsp/tool/top/top.jsp"%>
 <div class="head-bread">
     <div class="container">
         <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Men</a></li>
-            <li class="active">Shop</li>
+            <li><a href="#">Shoes</a></li>
+            <li class="active">Detail</li>
         </ol>
     </div>
 </div>
@@ -218,18 +96,18 @@
                 <div class="float-qty-chart">
                     <ul>
                         <li class="qty">
-                            <h3>Size Chart</h3>
+                            <h3>选择尺码</h3>
                             <select id="shoessize" class="form-control siz-chrt">
-                                <option>6 US</option>
-                                <option>7 US</option>
-                                <option>8 US</option>
-                                <option>9 US</option>
-                                <option>10 US</option>
-                                <option>11 US</option>
+                                <option>38</option>
+                                <option>39</option>
+                                <option>40</option>
+                                <option>41</option>
+                                <option>42</option>
+                                <option>43</option>
                             </select>
                         </li>
                         <li class="qty">
-                            <h4>QTY</h4>
+                            <h4>购买数量</h4>
                             <select id="number" class="form-control qnty-chrt">
                                 <option>1</option>
                                 <option>2</option>
@@ -245,19 +123,20 @@
                 </div>
                 <ul>
                     <li class="ad-2-crt simpleCart_shelfItem">
-                        <a class="btn item_add" id="AddToCart"  href="javascript:void(0);" role="button">Add To Cart</a>
-                        <a class="btn" href="#" role="button">Buy Now</a>
+                        <a class="btn item_add" id="addtocart"  href="javascript:void(0);" role="button">添加至购物车</a>
+                        <a class="btn" id="buynow" href="javascript:void(0);" role="button">立即购买</a>
                     </li>
                 </ul>
             </div>
             <div class="showcase-last">
-                <h3>product details</h3>
+                <h3>商品详情介绍</h3>
                 <ul>
-                    <li>Internal bootie wraps your foot for a sock-like fit</li>
-                    <li>Unique eyestays work with the Flywire cables to create an even better glove-like fit</li>
-                    <li>Waffle outsole for durability and multi-surface traction</li>
-                    <li>Sculpted Cushlon midsole combines plush cushioning and springy resilience for impact protection</li>
-                    <li>Midsole flex grooves for greater forefoot flexibility</li>
+                    <li>Air Jordan 5 Retro PREM 复刻运动鞋采用皮革鞋面妙搭内嵌式 Air 配置，缔造舒适耐用的穿着效果和轻盈缓震体验。</li>
+                    <li>牛剖层革、牛头层革与合成革组合鞋面，营造出众舒适感</li>
+                    <li>Air-Sole 气垫，轻盈缓震</li>
+                    <li>皮革鞋面，舒适耐穿</li>
+                    <li>橡胶外底经久耐磨，抓地力非凡</li>
+                    <li>泡棉中底，舒适耐磨</li>
                 </ul>
             </div>
         </div>
@@ -267,33 +146,33 @@
 
 <div class="specifications">
     <div class="container">
-        <h3>Item Details</h3>
+        <h3>详细信息</h3>
         <div class="detai-tabs">
             <!-- Nav tabs -->
             <ul class="nav nav-pills tab-nike" role="tablist">
-                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Highlights</a></li>
-                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Description</a></li>
-                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Terms & conditiona</a></li>
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">服务保证</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">品牌简介</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">用户评价</a></li>
             </ul>
 
             <!-- Tab panes -->
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="home">
-                    <p>The full-length Max Air unit delivers excellent cushioning with enhanced flexibility for smoother transitions through footstrike.</p>
-                    <p>Dynamic Flywire cables integrate with the laces and wrap your midfoot for a truly adaptive, supportive fit.</p>
+                    <p>如买家认为该商品为假冒品牌，买家可在指定期间内发起针对商家的维权，如商品的鉴定结果为假冒品牌</p>
+                    <p>则由店主CYP进行赔偿，金额为买家实际支付商品价款的四倍。</p>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="profile">
-                    <p>Nike is one of the leading manufacturer and supplier of sports equipment, footwear and apparels. Nike is a global brand and it continuously creates products using high technology and design innovation. Nike has a vast collection of sports shoes for men at Snapdeal. You can explore our range of basketball shoes, football shoes, cricket shoes, tennis shoes, running shoes, daily shoes or lifestyle shoes. Take your pick from an array of sports shoes in vibrant colours like red, yellow, green, blue, brown, black, grey, olive, pink, beige and white. Designed for top performance, these shoes match the way you play or run. Available in materials like leather, canvas, suede leather, faux leather, mesh etc, these shoes are lightweight, comfortable, sturdy and extremely sporty. The sole of all Nike shoes is designed to provide an increased amount of comfort and the material is good enough to provide an improved fit. These shoes are easy to maintain and last for a really long time given to their durability. Buy Nike shoes for men online with us at some unbelievable discounts and great prices. So get faster and run farther with your Nike shoes and track how hard you can play.</p>
+                    <p>耐克是体育设备，鞋类和服装的领先制造商和供应商之一。耐克是一个全球品牌，它不断创造出使用高科技和设计创新的产品。耐克在Snapdeal拥有大量男士运动鞋。您可以探索我们的篮球鞋，足球鞋，板球鞋，网球鞋，跑步鞋，日常鞋子或生活鞋。从一系列运动鞋中挑选出红色，黄色，绿色，蓝色，棕色，黑色，灰色，橄榄色，粉红色，米色和白色的鲜艳色彩。这些鞋子专为最佳表现而设计，与您的运行方式相匹配。可用于皮革，帆布，麂皮皮革，人造革，网眼等材料，这些鞋子重量轻，舒适，坚固，运动性强。所有Nike鞋的唯一设计是提供更多的舒适度，并且材料足够好以提供改进的配合。这些鞋子很容易维护，并持续了很长一段时间，因为它们的耐用性。购买耐克鞋男士在线与我们在一些令人难以置信的折扣和巨大的价格。因此，您的耐克鞋可以更新得更快，您可以玩得更久。</p>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="messages">
-                    The images represent actual product though color of the image and product may slightly differ.
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="you-might-like">
+<%--<div class="you-might-like">
     <div class="container">
         <h3 class="you-might">Products You May Like</h3>
         <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -358,7 +237,7 @@
         </div>
         <div class="clearfix"></div>
     </div>
-</div>
+</div>--%>
 <%@include file="/WEB-INF/jsp/tool/foot/foot.jsp"%>
 </body>
 </html>

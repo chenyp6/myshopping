@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
-    <title>Checkout</title>
+    <title>我的购物车</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
@@ -28,6 +28,7 @@
     <script src="/js/tool/jquery-2.1.4.min.js"></script>
     <!--bootstrap-js-->
     <script src="/js/tool/bootstrap.min.js"></script>
+    <script src="/js/tool/jquery-form.js"></script>
     <!--script-->
     <!-- FlexSlider -->
     <script src="/js/tool/imagezoom.js"></script>
@@ -61,29 +62,29 @@
 <div class="check">
     <div class="container">
         <div class="col-md-3 cart-total">
-            <a class="continue" href="#">Continue to basket</a>
+            <a class="continue" href="#">总价统计</a>
             <div class="price-details">
-                <h3>Price Details</h3>
-                <span>Total</span>
+                <h3>统计详情</h3>
+                <span>原价</span>
                 <span id="total" class="total1">6200.00</span>
-                <span>Discount</span>
-                <span class="total1">0%(Festival Offer)</span>
-                <span>Delivery Charges</span>
+                <span>折扣</span>
+                <span class="total1">0%(官方折扣)</span>
+                <span>运费</span>
                 <span class="total1">0.00</span>
                 <div class="clearfix"></div>
             </div>
             <hr class="featurette-divider">
             <ul class="total_price">
-                <li class="last_price"> <h4>TOTAL</h4></li>
+                <li class="last_price"> <h4>最终价格</h4></li>
                 <li  class="last_price"><span id="last_price">6150.00</span></li>
                 <div class="clearfix"> </div>
             </ul>
             <div class="clearfix"></div>
-            <a class="order" href="#">Place Order</a>
+            <a class="order" id="pay" href="javascript:void(0);">全部购买</a>
         </div>
-        <div id="cart" class="col-md-9 cart-items">
-            <h1>My Shopping Bag</h1>
-    </div>
+        <div id="cart"  class="col-md-9 cart-items">
+            <h1>我的购物车</h1>
+        </div>
 </div>
     <%@include file="/WEB-INF/jsp/tool/foot/foot.jsp"%>
 </body>

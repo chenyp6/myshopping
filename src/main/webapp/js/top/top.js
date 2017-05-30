@@ -5,7 +5,7 @@ $(function () {
     }
     else{
         $("#signup").css("display","none");
-        $("#login").text("Logout");
+        $("#login").text("退出");
         $("#login").attr("href","/myshopping/logout");
     }
 })

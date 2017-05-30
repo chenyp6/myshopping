@@ -31,7 +31,7 @@ $(function () {
                         '<td class="menshoesprice">' + data.menshoesDTOs[i].price + '</td>' +
                         '<td class="menshoesintroduction">' + data.menshoesDTOs[i].introduction + '</td>' +
                         '<td class="menshoeslevel">' + data.menshoesDTOs[i].shoeslevel + '</td>' +
-                        '<td><a href="#" class="changemenshoesmsg">修改</a> | <a href="#">删除</a></td>' +
+                        '<td><a href="#" class="changemenshoesmsg">修改</a> | <a href="#" class="deletemenshoes">删除</a></td>' +
                         '</tr>';
                     $('table').append(tbody);
                 }
@@ -86,7 +86,7 @@ $(function () {
                         '<td class="menshoesprice">' + data.menshoesDTOs[i].price + '</td>' +
                         '<td class="menshoesintroduction">' + data.menshoesDTOs[i].introduction + '</td>' +
                         '<td class="menshoeslevel">' + data.menshoesDTOs[i].shoeslevel + '</td>' +
-                        '<td><a href="#" class="changemenshoesmsg">修改</a> | <a href="#">删除</a></td>' +
+                        '<td><a href="#" class="changemenshoesmsg">修改</a> | <a href="#" class="deletemenshoes">删除</a></td>' +
                         '</tr>';
                     $('table').append(tbody);
                 }
@@ -115,7 +115,7 @@ $(function () {
                         '<td class="menshoesprice">' + data.menshoesDTOs[i].price + '</td>' +
                         '<td class="menshoesintroduction">' + data.menshoesDTOs[i].introduction + '</td>' +
                         '<td class="menshoeslevel">' + data.menshoesDTOs[i].shoeslevel + '</td>' +
-                        '<td><a href="#" class="changemenshoesmsg">修改</a> | <a href="#">删除</a></td>' +
+                        '<td><a href="#" class="changemenshoesmsg">修改</a> | <a href="#" class="deletemenshoes">删除</a></td>' +
                         '</tr>';
                     $('table').append(tbody);
                 }
@@ -157,6 +157,36 @@ $(function () {
                     mythis.closest(".itemmes").children(".menshoeslevel").html(mythis.closest(".itemmes").children(".menshoeslevel").children('input').val());
                 }else{
                     alert("修改失败！")
+                }
+            }
+        })
+    })
+
+    $(document).on('click','.deletemenshoes',function () {
+        $.ajax({
+            url:'/myshopping/deletemenshoes',
+            dataType:'json',
+            data:{
+              'shoesid':$(this).closest(".itemmes").children(".menshoesid").text(),
+                'page':$('#pagenow').val()
+            },
+            success:function (data) {
+                $(".itemmes").remove();
+                $(".msg").remove("");
+                if(data.msg==1){
+                    alert("删除成功！");
+                    for (var i = 0; i < data.menshoesDTOs.length; i++) {
+                        var tbody = '<tr class="itemmes">' +
+                            '<td class="menshoesid">' + data.menshoesDTOs[i].shoesid + '</td>' +
+                            '<td><img src="/images/' + data.menshoesDTOs[i].shoesid + '.jpg" style="width: 135px;"></td>' +
+                            '<td class="menshoesname">' + data.menshoesDTOs[i].shoesname + '</td>' +
+                            '<td class="menshoesprice">' + data.menshoesDTOs[i].price + '</td>' +
+                            '<td class="menshoesintroduction">' + data.menshoesDTOs[i].introduction + '</td>' +
+                            '<td class="menshoeslevel">' + data.menshoesDTOs[i].shoeslevel + '</td>' +
+                            '<td><a href="#" class="changemenshoesmsg">修改</a> | <a href="#" class="deletemenshoes">删除</a></td>' +
+                            '</tr>';
+                        $('table').append(tbody);
+                    }
                 }
             }
         })

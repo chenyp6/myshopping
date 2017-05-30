@@ -2,7 +2,7 @@
 <%@ page isELIgnored="false" %>
 <html lang="en">
 <head>
-    <title>Products</title>
+    <title>男子鞋类</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
@@ -173,8 +173,8 @@
 <div class="head-bread">
     <div class="container">
         <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li class="active">PRODUCTS</li>
+            <li><a href="index.html">男子商品</a></li>
+            <li class="active">男子鞋类</li>
         </ol>
     </div>
 </div>
@@ -198,7 +198,7 @@
                 </div>
                 <!-- end normal -->
                 <div class="quick-view">
-                    <a href="/myshopping/single">Quick view</a>
+                    <a href="/myshopping/single">查看详情</a>
                 </div>
             </div>
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -218,7 +218,7 @@
                 </div>
                 <!-- end normal -->
                 <div class="quick-view">
-                    <a href="/myshopping/single">Quick view</a>
+                    <a href="/myshopping/single">查看详情</a>
                 </div>
             </div>
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -238,7 +238,7 @@
                 </div>
                 <!-- end normal -->
                 <div class="quick-view">
-                    <a href="/myshopping/single">Quick view</a>
+                    <a href="/myshopping/single">查看详情</a>
                 </div>
             </div>
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -258,7 +258,7 @@
                 </div>
                 <!-- end normal -->
                 <div class="quick-view">
-                    <a href="/myshopping/single">Quick view</a>
+                    <a href="/myshopping/single">查看详情</a>
                 </div>
             </div>
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -278,7 +278,7 @@
                 </div>
                 <!-- end normal -->
                 <div class="quick-view">
-                    <a href="/myshopping/single">Quick view</a>
+                    <a href="/myshopping/single">查看详情</a>
                 </div>
             </div>
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -298,7 +298,7 @@
                 </div>
                 <!-- end normal -->
                 <div class="quick-view">
-                    <a href="/myshopping/single">Quick view</a>
+                    <a href="/myshopping/single">查看详情</a>
                 </div>
             </div>
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -318,7 +318,7 @@
                 </div>
                 <!-- end normal -->
                 <div class="quick-view">
-                    <a href="/myshopping/single">Quick view</a>
+                    <a href="/myshopping/single">查看详情</a>
                 </div>
             </div>
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -338,7 +338,7 @@
                 </div>
                 <!-- end normal -->
                 <div class="quick-view">
-                    <a href="/myshopping/single">Quick view</a>
+                    <a href="/myshopping/single">查看详情</a>
                 </div>
             </div>
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -358,7 +358,7 @@
                 </div>
                 <!-- end normal -->
                 <div class="quick-view">
-                    <a href="/myshopping/single">Quick view</a>
+                    <a href="/myshopping/single">查看详情</a>
                 </div>
             </div>
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -378,7 +378,7 @@
                 </div>
                 <!-- end normal -->
                 <div class="quick-view">
-                    <a href="/myshopping/single">Quick view</a>
+                    <a href="/myshopping/single">查看详情</a>
                 </div>
             </div>
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -398,7 +398,7 @@
                 </div>
                 <!-- end normal -->
                 <div class="quick-view">
-                    <a href="/myshopping/single">Quick view</a>
+                    <a href="/myshopping/single">查看详情</a>
                 </div>
             </div>
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -418,7 +418,7 @@
                 </div>
                 <!-- end normal -->
                 <div class="quick-view">
-                    <a href="/myshopping/single">Quick view</a>
+                    <a href="/myshopping/single">查看详情</a>
                 </div>
             </div>
             <div class="clearfix"></div>

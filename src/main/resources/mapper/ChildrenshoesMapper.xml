@@ -7,6 +7,7 @@
     <result column="price" property="price" jdbcType="INTEGER" />
     <result column="introduction" property="introduction" jdbcType="VARCHAR" />
     <result column="shoeslevel" property="shoeslevel" jdbcType="INTEGER" />
+    <result column="salenumber" property="salenumber" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -67,7 +68,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    shoesid, shoesname, price, introduction, shoeslevel
+    shoesid, shoesname, price, introduction, shoeslevel, salenumber
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.cyp.gp.children.dao.ChildrenshoesExample" >
     select
@@ -101,9 +102,11 @@
   </delete>
   <insert id="insert" parameterType="com.cyp.gp.children.dao.Childrenshoes" >
     insert into childrenshoes (shoesid, shoesname, price, 
-      introduction, shoeslevel)
+      introduction, shoeslevel, salenumber
+      )
     values (#{shoesid,jdbcType=VARCHAR}, #{shoesname,jdbcType=VARCHAR}, #{price,jdbcType=INTEGER}, 
-      #{introduction,jdbcType=VARCHAR}, #{shoeslevel,jdbcType=INTEGER})
+      #{introduction,jdbcType=VARCHAR}, #{shoeslevel,jdbcType=INTEGER}, #{salenumber,jdbcType=INTEGER}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.cyp.gp.children.dao.Childrenshoes" >
     insert into childrenshoes
@@ -123,6 +126,9 @@
       <if test="shoeslevel != null" >
         shoeslevel,
       </if>
+      <if test="salenumber != null" >
+        salenumber,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="shoesid != null" >
@@ -139,6 +145,9 @@
       </if>
       <if test="shoeslevel != null" >
         #{shoeslevel,jdbcType=INTEGER},
+      </if>
+      <if test="salenumber != null" >
+        #{salenumber,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -166,6 +175,9 @@
       <if test="record.shoeslevel != null" >
         shoeslevel = #{record.shoeslevel,jdbcType=INTEGER},
       </if>
+      <if test="record.salenumber != null" >
+        salenumber = #{record.salenumber,jdbcType=INTEGER},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -177,7 +189,8 @@
       shoesname = #{record.shoesname,jdbcType=VARCHAR},
       price = #{record.price,jdbcType=INTEGER},
       introduction = #{record.introduction,jdbcType=VARCHAR},
-      shoeslevel = #{record.shoeslevel,jdbcType=INTEGER}
+      shoeslevel = #{record.shoeslevel,jdbcType=INTEGER},
+      salenumber = #{record.salenumber,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -197,6 +210,9 @@
       <if test="shoeslevel != null" >
         shoeslevel = #{shoeslevel,jdbcType=INTEGER},
       </if>
+      <if test="salenumber != null" >
+        salenumber = #{salenumber,jdbcType=INTEGER},
+      </if>
     </set>
     where shoesid = #{shoesid,jdbcType=VARCHAR}
   </update>
@@ -205,7 +221,8 @@
     set shoesname = #{shoesname,jdbcType=VARCHAR},
       price = #{price,jdbcType=INTEGER},
       introduction = #{introduction,jdbcType=VARCHAR},
-      shoeslevel = #{shoeslevel,jdbcType=INTEGER}
+      shoeslevel = #{shoeslevel,jdbcType=INTEGER},
+      salenumber = #{salenumber,jdbcType=INTEGER}
     where shoesid = #{shoesid,jdbcType=VARCHAR}
   </update>
   <select id="selectByPage" parameterType="int" resultType="com.cyp.gp.children.dto.ChildrenShoesDTO">
@@ -220,5 +237,7 @@
   <select id="FuzzySerchByIndex"  parameterType="java.lang.String" resultType="com.cyp.gp.children.dao.Childrenshoes">
     select * from childrenshoes WHERE shoesid LIKE concat(concat('%',#{index}),'%')
   </select>
-
+  <select id="selectSaledToAdminByPage" parameterType="int" resultType="com.cyp.gp.children.dao.Childrenshoes" >
+    SELECT * FROM childrenshoes ORDER BY salenumber DESC limit #{page},10
+  </select>
 </mapper>

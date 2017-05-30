@@ -433,6 +433,66 @@ public class WomenshoesExample {
             addCriterion("shoeslevel not between", value1, value2, "shoeslevel");
             return (Criteria) this;
         }
+
+        public Criteria andSalenumberIsNull() {
+            addCriterion("salenumber is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalenumberIsNotNull() {
+            addCriterion("salenumber is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalenumberEqualTo(Integer value) {
+            addCriterion("salenumber =", value, "salenumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalenumberNotEqualTo(Integer value) {
+            addCriterion("salenumber <>", value, "salenumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalenumberGreaterThan(Integer value) {
+            addCriterion("salenumber >", value, "salenumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalenumberGreaterThanOrEqualTo(Integer value) {
+            addCriterion("salenumber >=", value, "salenumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalenumberLessThan(Integer value) {
+            addCriterion("salenumber <", value, "salenumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalenumberLessThanOrEqualTo(Integer value) {
+            addCriterion("salenumber <=", value, "salenumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalenumberIn(List<Integer> values) {
+            addCriterion("salenumber in", values, "salenumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalenumberNotIn(List<Integer> values) {
+            addCriterion("salenumber not in", values, "salenumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalenumberBetween(Integer value1, Integer value2) {
+            addCriterion("salenumber between", value1, value2, "salenumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andSalenumberNotBetween(Integer value1, Integer value2) {
+            addCriterion("salenumber not between", value1, value2, "salenumber");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

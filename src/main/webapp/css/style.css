@@ -43,7 +43,7 @@ a.log-bar {
     padding: 4px 12px;
     font-family: 'Pathway Gothic One';
     font-weight: 400;
-    font-size: 16px;
+    font-size: 13px;
     text-transform: capitalize;
 }
 a.log-bar:hover,a.log-bar:focus{
@@ -147,6 +147,7 @@ a.log-bar:hover,a.log-bar:focus{
     list-style: none;
 }
 .multi-column-dropdown li a {
+    font-size: 10px;
     display: block;
     clear: both;
     line-height: 1.428571429;
@@ -398,7 +399,7 @@ span.fel-fal-bar2{
     padding: 5px;
     font-weight: 400;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
     color: #1F1818;
     text-transform: uppercase;
     display:none;
@@ -666,7 +667,7 @@ option {
     outline: none;
 }
 .shocase-rt-bot h3 {
-    font-size: 22px;
+    font-size: 17px;
     text-transform: uppercase;
     font-family: 'Pathway Gothic One';
     font-weight: 100;
@@ -674,7 +675,7 @@ option {
     margin-bottom: 5px;
 }
 li.qty h4{
-    font-size: 22px;
+    font-size: 17px;
     text-transform: uppercase;
     font-family: 'Pathway Gothic One';
     font-weight: 100;
@@ -689,7 +690,7 @@ li.ad-2-crt a {
     background: #100b0b;
     color: #fff;
     font-family: 'Pathway Gothic One';
-    font-size: 18px;
+    font-size: 15px;
     border: none;
     border-radius: 0;
 }
@@ -720,7 +721,7 @@ h3.you-might{
     margin:15px 0px; 
 }
 .showcase-last ul{
-    list-style-type: none;
+   /* list-style-type: none;*/
 }
 .showcase-last ul li {
     line-height: 1.8em;
@@ -754,7 +755,7 @@ div#profile p,div#home p,div#messages {
     color: #100b0b;
     font-family: 'Pathway Gothic One';
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
 }
 .tab-nike>li.active>a,.tab-nike>li.active>a:focus,.tab-nike>li.active>a:hover{
     color: #100b0b;
@@ -1520,7 +1521,7 @@ div textarea {
     a.log-bar {
         padding: 3px 10px;
         font-weight: 100;
-        font-size: 15px;
+        font-size: 12px;
     }
     span.simpleCart_total {
         font-size: 14px;

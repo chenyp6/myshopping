@@ -25,7 +25,7 @@
     <div class="container">
         <h1>Welcome</h1>
         <form class="form" action="/myshopping/checkadmin" method="post">
-            <input type="text" name="userid" placeholder="用户名" value="${userid}">
+            <input type="text" name="userid" placeholder="用户名" value="${adminid}">
             <input type="password" name="pwd" placeholder="密码">
             <button type="submit" id="login-button">登录</button>
         </form>

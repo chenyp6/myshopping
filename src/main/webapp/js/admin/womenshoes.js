@@ -31,7 +31,7 @@ $(function () {
                         '<td class="womenshoesprice">' + data.womenshoesDTOs[i].price + '</td>' +
                         '<td class="womenshoesintroduction">' + data.womenshoesDTOs[i].introduction + '</td>' +
                         '<td class="womenshoeslevel">' + data.womenshoesDTOs[i].shoeslevel + '</td>' +
-                        '<td><a href="#" class="changewomenshoesmsg">修改</a> | <a href="#">删除</a></td>' +
+                        '<td><a href="#" class="changewomenshoesmsg">修改</a> | <a class="deletewomenshoes" href="#">删除</a></td>' +
                         '</tr>';
                     $('table').append(tbody);
                 }
@@ -86,7 +86,7 @@ $(function () {
                         '<td class="womenshoesprice">' + data.womenshoesDTOs[i].price + '</td>' +
                         '<td class="womenshoesintroduction">' + data.womenshoesDTOs[i].introduction + '</td>' +
                         '<td class="womenshoeslevel">' + data.womenshoesDTOs[i].shoeslevel + '</td>' +
-                        '<td><a href="#" class="changewomenshoesmsg">修改</a> | <a href="#">删除</a></td>' +
+                        '<td><a href="#" class="changewomenshoesmsg">修改</a> | <a class="deletewomenshoes" href="#">删除</a></td>' +
                         '</tr>';
                     $('table').append(tbody);
                 }
@@ -115,7 +115,7 @@ $(function () {
                         '<td class="womenshoesprice">' + data.womenshoesDTOs[i].price + '</td>' +
                         '<td class="womenshoesintroduction">' + data.womenshoesDTOs[i].introduction + '</td>' +
                         '<td class="womenshoeslevel">' + data.womenshoesDTOs[i].shoeslevel + '</td>' +
-                        '<td><a href="#" class="changewomenshoesmsg">修改</a> | <a href="#">删除</a></td>' +
+                        '<td><a href="#" class="changewomenshoesmsg">修改</a> | <a class="deletewomenshoes" href="#">删除</a></td>' +
                         '</tr>';
                     $('table').append(tbody);
                 }
@@ -157,6 +157,36 @@ $(function () {
                     mythis.closest(".itemmes").children(".womenshoeslevel").html(mythis.closest(".itemmes").children(".womenshoeslevel").children('input').val());
                 }else{
                     alert("修改失败！")
+                }
+            }
+        })
+    })
+
+    $(document).on('click','.deletewomenshoes',function () {
+        $.ajax({
+            url:'/myshopping/deletewomenshoes',
+            dataType:'json',
+            data:{
+                'shoesid':$(this).closest(".itemmes").children(".womenshoesid").text(),
+                'page':$('#pagenow').val()
+            },
+            success:function (data) {
+                $(".itemmes").remove();
+                $(".msg").remove("");
+                if(data.msg==1){
+                    alert("删除成功！");
+                    for (var i = 0; i < data.womenshoesDTOs.length; i++) {
+                        var tbody = '<tr class="itemmes">' +
+                            '<td class="womenshoesid">' + data.womenshoesDTOs[i].shoesid + '</td>' +
+                            '<td><img src="/images/' + data.womenshoesDTOs[i].shoesid + '.jpg" style="width: 135px;"></td>' +
+                            '<td class="womenshoesname">' + data.womenshoesDTOs[i].shoesname + '</td>' +
+                            '<td class="womenshoesprice">' + data.womenshoesDTOs[i].price + '</td>' +
+                            '<td class="womenshoesintroduction">' + data.womenshoesDTOs[i].introduction + '</td>' +
+                            '<td class="womenshoeslevel">' + data.womenshoesDTOs[i].shoeslevel + '</td>' +
+                            '<td><a href="#" class="changewomenshoesmsg">修改</a> | <a href="#" class="deletewomenshoes">删除</a></td>' +
+                            '</tr>';
+                        $('table').append(tbody);
+                    }
                 }
             }
         })

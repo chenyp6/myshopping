@@ -1,6 +1,6 @@
 function change(){
         window.clearInterval(mytime);
-        window.open("/myshopping","_self");
+        window.open("/myshopping/login","_self");
     }
 window.setTimeout("change()", 5000);
 

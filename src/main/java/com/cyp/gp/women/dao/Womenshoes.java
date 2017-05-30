@@ -11,6 +11,8 @@ public class Womenshoes {
 
     private Integer shoeslevel;
 
+    private Integer salenumber;
+
     public String getShoesid() {
         return shoesid;
     }
@@ -49,5 +51,13 @@ public class Womenshoes {
 
     public void setShoeslevel(Integer shoeslevel) {
         this.shoeslevel = shoeslevel;
+    }
+
+    public Integer getSalenumber() {
+        return salenumber;
+    }
+
+    public void setSalenumber(Integer salenumber) {
+        this.salenumber = salenumber;
     }
 }

@@ -16,24 +16,21 @@ public class LoginInterceptor implements HandlerInterceptor{
         String url = httpServletRequest.getRequestURI();
         //判断url是否是公开 地址（实际使用时将公开 地址配置配置文件中）
         //这里公开地址是登陆提交的地址
-        if(url.indexOf("login")>=0){
-            //如果进行登陆提交，放行
-            return true;
+        if(url.indexOf("cart")>=0){
+            HttpSession session= httpServletRequest.getSession();
+            String userid=(String)session.getAttribute("userid");
+            if(userid == null){
+                if (httpServletRequest.getHeader("x-requested-with")!= null && httpServletRequest.getHeader("x-requested-with").equalsIgnoreCase("XMLHttpRequest")){
+                    return true;
+                }else {
+                    httpServletResponse.sendRedirect("/myshopping/login");
+                    return false;
+                }
+            }
         }
 
-        HttpSession session= httpServletRequest.getSession();
-        String userid=(String)session.getAttribute("userid");
-        if(userid != null){
-            //身份存在，放行
-            return true;
-        }
 
-        //执行这里表示用户身份需要认证，跳转登陆页面
-        httpServletRequest.getRequestDispatcher("/WEB-INF/jsp/login/login.jsp").forward(httpServletRequest, httpServletResponse);
-
-        //return false表示拦截，不向下执行
-        //return true表示放行
-        return false;
+        return true;
 
     }
 

@@ -31,7 +31,7 @@ $(function () {
                         '<td class="childrenshoesprice">' + data.childrenshoesDTOs[i].price + '</td>' +
                         '<td class="childrenshoesintroduction">' + data.childrenshoesDTOs[i].introduction + '</td>' +
                         '<td class="childrenshoeslevel">' + data.childrenshoesDTOs[i].shoeslevel + '</td>' +
-                        '<td><a href="#"  class="changechildrenshoesmsg">修改</a> | <a href="#">删除</a></td>' +
+                        '<td><a href="#"  class="changechildrenshoesmsg">修改</a> | <a class="deletechildrenshoes" href="#">删除</a></td>' +
                         '</tr>';
                     $('table').append(tbody);
                 }
@@ -86,7 +86,7 @@ $(function () {
                         '<td class="childrenshoesprice">' + data.childrenshoesDTOs[i].price + '</td>' +
                         '<td class="childrenshoesintroduction">' + data.childrenshoesDTOs[i].introduction + '</td>' +
                         '<td class="childrenshoeslevel">' + data.childrenshoesDTOs[i].shoeslevel + '</td>' +
-                        '<td><a href="#" class="changechildrenshoesmsg">修改</a> | <a href="#">删除</a></td>' +
+                        '<td><a href="#" class="changechildrenshoesmsg">修改</a> | <a class="deletechildrenshoes" href="#">删除</a></td>' +
                         '</tr>';
                     $('table').append(tbody);
                 }
@@ -115,7 +115,7 @@ $(function () {
                         '<td class="childrenshoesprice">' + data.childrenshoesDTOs[i].price + '</td>' +
                         '<td class="childrenshoesintroduction">' + data.childrenshoesDTOs[i].introduction + '</td>' +
                         '<td class="childrenshoeslevel">' + data.childrenshoesDTOs[i].shoeslevel + '</td>' +
-                        '<td ><a href="#" class="changechildrenshoesmsg">修改</a> | <a href="#">删除</a></td>' +
+                        '<td ><a href="#" class="changechildrenshoesmsg">修改</a> | <a class="deletechildrenshoes" href="#">删除</a></td>' +
                         '</tr>';
                     $('table').append(tbody);
                 }
@@ -157,6 +157,36 @@ $(function () {
                     mythis.closest(".itemmes").children(".childrenshoeslevel").html(mythis.closest(".itemmes").children(".childrenshoeslevel").children('input').val());
                 }else{
                     alert("修改失败！")
+                }
+            }
+        })
+    })
+
+    $(document).on('click','.deletechildrenshoes',function () {
+        $.ajax({
+            url:'/myshopping/deletechildrenshoes',
+            dataType:'json',
+            data:{
+                'shoesid':$(this).closest(".itemmes").children(".childrenshoesid").text(),
+                'page':$('#pagenow').val()
+            },
+            success:function (data) {
+                $(".itemmes").remove();
+                $(".msg").remove("");
+                if(data.msg==1){
+                    alert("删除成功！");
+                    for (var i = 0; i < data.childrenshoesDTOs.length; i++) {
+                        var tbody = '<tr class="itemmes">' +
+                            '<td class="childrenshoesid">' + data.childrenshoesDTOs[i].shoesid + '</td>' +
+                            '<td><img src="/images/' + data.childrenshoesDTOs[i].shoesid + '.jpg" style="width: 135px;"></td>' +
+                            '<td class="childrenshoesname">' + data.childrenshoesDTOs[i].shoesname + '</td>' +
+                            '<td class="childrenshoesprice">' + data.childrenshoesDTOs[i].price + '</td>' +
+                            '<td class="childrenshoesintroduction">' + data.childrenshoesDTOs[i].introduction + '</td>' +
+                            '<td class="childrenshoeslevel">' + data.childrenshoesDTOs[i].shoeslevel + '</td>' +
+                            '<td><a href="#" class="changechildrenshoesmsg">修改</a> | <a href="#" class="deletechildrenshoes">删除</a></td>' +
+                            '</tr>';
+                        $('table').append(tbody);
+                    }
                 }
             }
         })

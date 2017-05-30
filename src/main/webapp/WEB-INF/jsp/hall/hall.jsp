@@ -4,7 +4,7 @@
 <%@ page isELIgnored="false" %>
 <html lang="en">
 <head>
-    <title>Home</title>
+    <title>CYP的Nike专营店</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
@@ -86,7 +86,7 @@
             <div class=" fall-left">
                 <h3>Fall</h3>
                 <img src="/images/f-l.png" alt="/" class="img-responsive fl-img-wid">
-                <p>Inspiration and innovation<br> for every athlete in the world</p>
+                <p>迅捷灵动，为赛场而生<br> 塑就稳定脚感和舒适缓震效果，引爆赛场灵动</p>
                 <span class="fel-fal-bar"></span>
             </div>
         </div>
@@ -94,7 +94,7 @@
             <div class="feel-right">
                 <h3>Feel</h3>
                 <img src="/images/f-r.png" alt="/" class="img-responsive fl-img-wid">
-                <p>Inspiration and innovation<br> for every athlete in the world</p>
+                <p>经历漫长赛季考验，传承前11代诸多科技与灵感<br> 只为打造精准杀器，完美延续曼巴精神</p>
                 <span class="fel-fal-bar2"></span>
             </div>
         </div>
@@ -120,7 +120,7 @@
             </div>
             <!-- end normal -->
             <div class="quick-view">
-                <a id="indexshoesqv2" href="/myshopping/single">Quick view</a>
+                <a id="indexshoesqv2" href="/myshopping/single">查看详情</a>
             </div>
         </div>
         <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -140,7 +140,7 @@
             </div>
             <!-- end normal -->
             <div class="quick-view">
-                <a id="indexshoesqv4" href="/myshopping/single">Quick view</a>
+                <a id="indexshoesqv4" href="/myshopping/single">查看详情</a>
             </div>
         </div>
         <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -160,7 +160,7 @@
             </div>
             <!-- end normal -->
             <div class="quick-view">
-                <a id="indexshoesqv1" href="/myshopping/single">Quick view</a>
+                <a id="indexshoesqv1" href="/myshopping/single">查看详情</a>
             </div>
         </div>
         <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -180,7 +180,7 @@
             </div>
             <!-- end normal -->
             <div class="quick-view">
-                <a id="indexshoesqv3" href="/myshopping/single">Quick view</a>
+                <a id="indexshoesqv3" href="/myshopping/single">查看详情</a>
             </div>
         </div>
         <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -200,7 +200,7 @@
             </div>
             <!-- end normal -->
             <div class="quick-view">
-                <a id="indexshoesqv5" href="/myshopping/single">Quick view</a>
+                <a id="indexshoesqv5" href="/myshopping/single">查看详情</a>
             </div>
         </div>
         <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -220,7 +220,7 @@
             </div>
             <!-- end normal -->
             <div class="quick-view">
-                <a id="indexshoesqv6" href="/myshopping/single">Quick view</a>
+                <a id="indexshoesqv6" href="/myshopping/single">查看详情</a>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -229,9 +229,9 @@
 <div class="sub-news">
     <div class="container">
         <form>
-            <h3>NewsLetter</h3>
+            <h3>站内搜索</h3>
             <input type="text" class="sub-email" value="Email" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Email';}">
-            <a class="btn btn-default subs-btn" href="#" role="button">SUBSCRIBE</a>
+            <a class="btn btn-default subs-btn" href="#" role="button">搜索</a>
         </form>
     </div>
 </div>

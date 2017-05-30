@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
-    <title>Checkout</title>
+    <title>欢迎登陆！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
@@ -54,9 +54,9 @@
                 <a href="/myshopping">N-AIR</a>
             </div>
             <div class="login-bars">
-                <a class="btn btn-default log-bar" href="/myshopping/register" role="button">Sign up</a>
-                <a class="btn btn-default log-bar" href="/myshopping/login" role="button">Login</a>
-                <div class="cart box_1">
+                <a class="btn btn-default log-bar" href="/myshopping/register" role="button">注册</a>
+                <a class="btn btn-default log-bar" href="/myshopping/login" role="button">登录</a>
+                <%--<div class="cart box_1">
                     <a href="checkout.html">
                         <h3>
                             <div class="total">
@@ -64,7 +64,7 @@
                     </a>
                     <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
                     <div class="clearfix"> </div>
-                </div>
+                </div>--%>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -84,7 +84,7 @@
 
                     <div class="collapse navbar-collapse collapse-pdng" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav nav-font">
-                            <li class="dropdown">
+                            <%--<li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Shoes</a></li>
@@ -95,20 +95,20 @@
                                     <li class="divider"></li>
                                     <li><a href="#">Gear</a></li>
                                 </ul>
-                            </li>
+                            </li>--%>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men<b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">男子<b class="caret"></b></a>
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="row">
                                         <div class="col-sm-4 menu-img-pad">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="/myshopping/menshoes">Joggers</a></li>
-                                                <li><a href="#">Foot Ball</a></li>
-                                                <li><a href="#">Cricket</a></li>
+                                                <li><a href="/myshopping/menshoes">鞋类</a></li>
+                                                <li><a href="#">上衣</a></li>
+                                                <li><a href="#">长裤</a></li>
                                                 <li class="divider"></li>
-                                                <li><a href="#">Tennis</a></li>
+                                                <li><a href="#">袜子</a></li>
                                                 <li class="divider"></li>
-                                                <li><a href="#">Casual</a></li>
+                                                <li><a href="#">配件/装备</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-4 menu-img-pad">
@@ -121,18 +121,18 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Women<b class="caret"></b></a>
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">女子<b class="caret"></b></a>
                                 <ul class="dropdown-menu multi-column columns-2">
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <ul class="multi-column-dropdown">
-                                                <li><a href="/myshopping/womenshoes">Tops</a></li>
-                                                <li><a href="#">Bottoms</a></li>
-                                                <li><a href="#">Yoga Pants</a></li>
+                                                <li><a href="/myshopping/womenshoes">鞋类</a></li>
+                                                <li><a href="#">上衣</a></li>
+                                                <li><a href="#">瑜伽</a></li>
                                                 <li class="divider"></li>
-                                                <li><a href="#">Sports</a></li>
+                                                <li><a href="#">袜子</a></li>
                                                 <li class="divider"></li>
-                                                <li><a href="#">Gym</a></li>
+                                                <li><a href="#">配件/装备</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-6">
@@ -142,18 +142,18 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">kids<b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">儿童<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="/myshopping/childreshoes">Tees</a></li>
-                                    <li><a href="#">Shorts</a></li>
-                                    <li><a href="#">Gear</a></li>
+                                    <li><a href="/myshopping/childrenshoes">鞋类</a></li>
+                                    <li><a href="#">上衣</a></li>
+                                    <li><a href="#">长裤</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="#">Watches</a></li>
+                                    <li><a href="#">运动套装</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="#">Shoes</a></li>
+                                    <li><a href="#">配件/装备</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Catch</a></li>
+                            <li><a href="#">专属定制</a></li>
                             <div class="clearfix"></div>
                         </ul>
                         <div class="clearfix"></div>
@@ -185,23 +185,23 @@
             <div class="col-md-6 log">
                 <h3>Login</h3>
                 <div class="strip"></div>
-                <p>Welcome, please enter the following to continue.</p>
-                <p>If you have previously Login with us, <a href="#">Click Here</a></p>
+                <p>欢迎到CYP的Nike专营店。</p>
+                <p>如果您已经是本店的会员，请在下方进行登录</p>
                 <form action="/myshopping/checkuser" method="post">
-                    <h5>User Name:</h5>
+                    <h5>用户名:</h5>
                     <input id="userid" name="userid" type="text" value="${usersDTO.userid}">
-                    <h5>Password:</h5>
+                    <h5>密码:</h5>
                     <input id="pwd" name="pwd" type="password" value=""><span style="color: red;">${mes}</span><br>
-                    <input type="submit" value="Login">
+                    <input type="submit" value="登录">
 
                 </form>
-                <a href="#">Forgot Password ?</a>
+                <a href="#">忘记密码 ?</a>
             </div>
             <div class="col-md-6 login-right">
-                <h3>New Registration</h3>
+                <h3>注册成为CYP Nike专营店的会员</h3>
                 <div class="strip"></div>
-                <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
-                <a href="/myshopping/register" class="button">Create An Account</a>
+                <p>CYP专营店 随时为你服务，助你选购卓越装备，为你提供专业指导、非凡体验和无限动力。</p>
+                <a href="/myshopping/register" class="button">新用户注册点击这里</a>
             </div>
             <div class="clearfix"></div>
         </div>
